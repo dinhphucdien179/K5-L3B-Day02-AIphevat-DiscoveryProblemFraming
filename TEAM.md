@@ -88,3 +88,30 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 **Điều mình học được từ phần nhóm:**
 
 -Nhóm làm việc nghiêm túc, tinh thần trao đổi nhóm sôi nổi nên mình cũng học được rất nhiều những ý tưởng từ các bạn.
+
+### Nguyễn Trọng Nghĩa - 2A202603835
+
+**Phần việc phụ trách:**
+
+- Người chính phần CP5: Quy trình trước/sau và Problem Statement v0 (vai trò vẽ quy trình, viết Problem Statement).
+- Hỗ trợ CP3 (hội tụ nhóm) và CP4 (research) theo bảng phân công.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Đưa 3 candidate vào danh sách 12 candidate của nhóm (C10 tìm lại cách sửa lỗi lab trong kênh chat, C11 đối chiếu slide và báo cáo, C12 ghi lại pattern và lỗi sai khi luyện lập trình), từ 3 Problem Card trong báo cáo cá nhân.
+- Dựng quy trình hiện tại 6 bước cho C08 theo lời kể của 2 người được phỏng vấn ở CP4, kèm bảng actor / input / output / thời gian; xác định bottleneck là bước 2–4 (kiểm tay từng lead với file tổng dùng chung và hệ thống thanh toán).
+- Vẽ quy trình tương lai ở mức Rule: công thức chạy trên sheet kiểm riêng chỉ đọc file tổng, thêm bước kiểm số điện thoại hợp lệ, cờ "CHƯA RÕ" khi không tra được thanh toán, bước con người duyệt lead có cờ và phương án quay về kiểm tay. Xuất sơ đồ thành ảnh.
+- Lập bảng before/after và viết Problem Statement v0 (6 trường), trong đó metric chính là số khách bị gọi trùng / nhầm / lỗi mỗi tuần, thời gian kiểm là metric phụ.
+- Sau khi phần CP4 được cập nhật, đối chiếu và sửa lại mục 4–5 cho khớp kết quả phỏng vấn: bỏ số liệu cũ của card (2–3 giờ/ngày), đổi bottleneck, metric, boundary theo ràng buộc file dùng chung.
+- Nhờ AI phản biện Problem Statement v0 và ghi lại 5 điểm phản biện kèm hướng xử lý. Có dùng AI (Claude) để hỗ trợ dựng sơ đồ và soạn nháp; đã tự đối chiếu từng bước với mục 3.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md` mục 4 (4.1 quy trình hiện tại, 4.2 quy trình tương lai, 4.3 before/after) và mục 5 (Problem Statement v0, bảng phản biện).
+- `report/assets/cp5-workflow-future.png`: sơ đồ quy trình tương lai.
+- `report/individual/2A202603835_NguyenTrongNghia.md`: mục 2–3 (scan problem và 3 Problem Card nguồn của C10–C12).
+
+**Điều mình học được từ phần nhóm:**
+
+- Số liệu trong card chỉ là giả thuyết: sau phỏng vấn, thời gian kiểm thực tế chỉ 20–50 phút/ngày chứ không phải 2–3 giờ, nên metric phải đổi từ "tiết kiệm thời gian" sang "giảm số khách bị gọi lỗi".
+- Quy trình tương lai phải vẽ theo ràng buộc thật của người dùng (file tổng dùng chung, không được chạy công thức trên đó), không vẽ theo cách lý tưởng nhất.
