@@ -6,14 +6,14 @@
 
 - Tên nhóm: AIphevat
 - Candidate problem nhóm chọn (1 câu): C08. Người chạy quảng cáo phải kiểm tay lead trùng và khách đã thanh toán trên file tổng dùng chung trước khi bàn giao cho Sales, khiến Sales vẫn gọi trùng, gọi nhầm hoặc gọi vào số sai.
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Quyết định cuối (Go / Not Yet / No-Go): **Not Yet với triển khai trên dữ liệu thật; ưu tiên kiểm chứng Rule trên sheet riêng chỉ đọc file tổng.** Chỉ xét Go cho pilot nhỏ sau khi xác nhận quyền dữ liệu, nguồn đối chiếu hiện hành, người duyệt, log Sales và tiêu chí kiểm thử (báo cáo nhóm mục 8).
 
 ## Thành viên
 
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | Đinh Phúc Diên|2A202603876 | Điều phối thời gian, ghi chép | dinhphucdien179 |
-| 2 | Lê Nguyễn Anh Nhân|2A202603838 | Viết Problem Statment, người phản biện chính | ying684 |
+| 2 | Lê Nguyễn Anh Nhân|2A202603838 | Phụ trách CP6: mức can thiệp, Problem Statement v1, eval và quyết định; người phản biện chính | ying684 |
 | 3 | Nguyễn Trọng Nghĩa| 2A202603835| Vẽ quy trình, viết Problem Statement | trongnghia2304 |
 | 4 | Nguyễn Nghiêm Khánh Tiệp | 2A202603863| Phụ trách research, kiểm chứng | tiepnnk01-10 |
 
@@ -30,12 +30,44 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | CP4 — Research | Nguyễn Nghiêm Khánh Tiệp | Nguyễn Trọng Nghĩa | Bảng research có link |
 | CP5 — Quy trình trước/sau | Nguyễn Trọng Nghĩa | không có | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | Nguyễn Trọng Nghĩa | Nguyễn Nghiêm Khánh Tiệp | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | Lê Nguyễn Anh Nhân | Nguyễn Nghiêm Khánh Tiệp | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Mức can thiệp + Problem Statement v1 | Lê Nguyễn Anh Nhân | Nguyễn Nghiêm Khánh Tiệp | Ma trận, so sánh 4 mức, lý do không áp dụng AI Canvas/PAIR khi chọn Rule, 5 tiêu chí eval, Problem Statement v1 |
 | CP6 — Quyết định | Lê Nguyễn Anh Nhân | Đinh Phúc Diên | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
 
 Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `HoVaTen-MSSV`.
+
+### LeNguyenAnhNhan-2A202603838
+
+**Phần việc phụ trách:**
+
+- Người chính CP6 — Mức can thiệp + Problem Statement v1; Tiệp hỗ trợ theo phân công.
+- Người chính CP6 — Quyết định; Diên hỗ trợ theo phân công.
+- Bổ sung mục 9 báo cáo nhóm — Hạn chế và hướng tiếp theo, theo phần việc mở rộng được giao.
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Hoàn thiện mục 6–8 báo cáo nhóm dựa trên candidate C08, kết quả kiểm chứng CP4 và quy trình/Problem Statement v0 ở CP5; có AI hỗ trợ phân tích và soạn nội dung.
+- Phân biệt độ phức tạp của toàn bộ quy trình nhiều bước với từng phép kiểm xác định; so sánh No AI, Rule, Workflow và Agent. Chọn Rule để kiểm chứng, giữ No AI + checklist làm đối chứng và phương án quay về.
+- Áp dụng hướng dẫn riêng cho No AI/Rule: giải thích không có bước AI thay vì tạo AI Canvas giả định; viết 5 tiêu chí đánh giá đầu ra Rule có điều kiện đạt/không đạt.
+- Hoàn thiện Problem Statement v1: tách loại lỗi gọi trùng/đã thanh toán/số sai; bổ sung tỷ lệ lỗi theo số khách đã gọi, quy ước bấm giờ, giới hạn kiểm định dạng và người duyệt. Ghi rõ thay đổi so với v0 và lý do.
+- Đánh giá đủ Value, Usability, Feasibility, Viability; ghi Not Yet với triển khai thật vì quyền dữ liệu và khả năng đối chiếu nguồn chưa xác nhận. Đề xuất bước kiểm chứng trong 5 ngày làm việc, pilot có điều kiện 5 ngày baseline + 5 ngày Rule và các ngưỡng dừng đo được.
+- Bổ sung mục 8.3 về cách xét lại quyết định; mục 9 về hạn chế, tác động tới kết luận và thứ tự kiểm chứng. Thêm sơ đồ Mermaid CP6 ở mục 6.5 và bảng truy nguồn dẫn chứng ở mục 7, liên kết tới hai ảnh phỏng vấn CP4 có sẵn.
+- Không coi kế hoạch pilot, dữ liệu giả lập hoặc ước lượng phỏng vấn là kết quả đã chạy; không bổ sung kết quả phỏng vấn, cam kết vận hành hay quyết định đồng thuận chưa được ghi nhận.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- [Báo cáo nhóm — mục 6](report/team/group_report.md#6-mức-can-thiệp-ai-cp6): ma trận, bảng so sánh và lý do chọn Rule.
+- [Báo cáo nhóm — mục 7](report/team/group_report.md#7-problem-statement-v1--tiêu-chí-đánh-giá-cp6): v1, thay đổi từ v0, quy ước đo và 5 tiêu chí đánh giá.
+- [Báo cáo nhóm — mục 8](report/team/group_report.md#8-quyết-định-cp6): 4 rủi ro, Not Yet, điều kiện pilot và ngưỡng dừng.
+- [Báo cáo nhóm — mục 9](report/team/group_report.md#9-hạn-chế-và-hướng-tiếp-theo): giới hạn bằng chứng, cách xử lý và lộ trình tiếp theo.
+- [Báo cáo cá nhân — mục 4–6](report/individual/2A202603838_LeNguyenAnhNhan.md#4-tôi-đã-tham-gia-phần-nào-cp3--cp7): nhật ký đóng góp, cách dùng AI và nội dung tự xem xét từ CP6.
+
+**Điều mình học được từ phần nhóm:**
+
+- Chọn mức can thiệp và quyết định triển khai là hai việc khác nhau: Rule phù hợp về logic vẫn có thể Not Yet khi chưa có quyền dữ liệu hoặc cách đo kết quả.
+- Cần kiểm chứng Rule so với checklist chuẩn hóa; nếu cách đơn giản hơn đạt cùng mục tiêu với ít công vận hành hơn thì chọn cách đó.
+- Một số điện thoại đúng định dạng không chứng minh đúng khách; cờ phải truy được về nguồn và có người xử lý trước khi bàn giao.
 
 ### Đinh Phúc Diên-2A202603876
 

@@ -259,38 +259,63 @@ Phản biện từ AI (Claude), prompt: "chỉ ra lỗ hổng của Problem Stat
 
 ### 6.1. Ma trận độ mơ hồ × độ phức tạp
 
-Bài của nhóm nằm ở ô:
+Bài của nhóm nằm ở ô **độ mơ hồ thấp × độ phức tạp cao nếu xét toàn bộ quy trình bàn giao**. Riêng từng phép kiểm số và so khớp chính xác có độ phức tạp thấp.
 
 Vì sao:
+
+- **Mơ hồ thấp trong phạm vi chọn:** chuẩn hóa cách ghi số điện thoại, kiểm định dạng và đối chiếu khóa trùng là các phép kiểm có điều kiện rõ. Trạng thái thanh toán phải lấy từ hệ thống nguồn; không cần mô hình dự đoán khách đã trả tiền hay chưa. Ca một người nhiều số hoặc nhiều người chung số nằm ngoài khả năng kết luận tự động.
+- **Phức tạp cao ở khâu phối hợp:** quy trình tương lai có 8 bước nối tiếp, đối chiếu 3 nguồn: lead mới, file tổng và hệ thống thanh toán. Kết quả còn phụ thuộc thời điểm cập nhật và người duyệt. Theo định nghĩa trong worksheet CP6, nhiều bước phụ thuộc nhau làm tăng độ phức tạp, nhưng không tự tạo nhu cầu dùng Agent.
+- Vì từng phép kiểm vẫn xác định được trước, hướng phù hợp là **Rule kết hợp con người**, kiểm chứng trên sheet riêng chỉ đọc file tổng như mô tả mục 4.2. Ca thiếu dữ liệu được chuyển người kiểm tra, không dùng AI để đoán bù.
 
 ### 6.2. So sánh 4 mức
 
 | Mức                       | Phương án cho bài của nhóm | Đủ khi nào | Rủi ro | Chọn? |
 | ------------------------- | -------------------------- | ---------- | ------ | ----- |
-| **No AI** (sửa quy trình) |                            |            |        |       |
-| **Rule**                  |                            |            |        |       |
-| **Workflow**              |                            |            |        |       |
-| **Agent**                 |                            |            |        |       |
+| **No AI** (sửa quy trình) | Quy định cách nhập số, checklist kiểm trùng/paid, người duyệt trước khi bàn giao; tìm kiếm thủ công trên file tổng. | Lượng lead ít và checklist giúp giảm lỗi đến target mà không tăng thời gian kiểm. | Vẫn phải tìm từng lead; bỏ qua một phép kiểm hoặc tìm khi chưa chuẩn hóa có thể làm lọt lỗi. | Là phương án đối chứng và quay về. |
+| **Rule** | Công thức trên sheet kiểm riêng: chuẩn hóa số, gắn cờ sai định dạng, trùng chính xác trong lô và với file tổng; tra paid nếu có bản xuất được phép dùng, nếu không thì tra web bằng tay. | Đọc được nguồn đáng tin cậy, có quy tắc số thống nhất và người xử lý mọi ngoại lệ. | Bản đọc trễ; số nhập nhầm nhưng đúng định dạng; một người nhiều số; người dùng bỏ qua cờ. | **Chọn để kiểm chứng; chưa triển khai thật.** |
+| **Workflow** | Các bước định sẵn, thêm AI gợi ý cặp nghi trùng từ tên/thông tin không thống nhất, rồi người duyệt. | Có dữ liệu cho thấy so khớp chính xác và người duyệt chưa đủ, đồng thời có bộ nhãn đánh giá ca mơ hồ. | Gợi ý nhầm khách, đưa dữ liệu khách vào mô hình, tăng công duyệt và chi phí. | Không chọn: CP4 chưa chứng minh cần bước suy luận này. |
+| **Agent** | AI tự chọn nguồn, tự tra cứu và tự quyết bước kiểm tiếp theo. | Tác vụ thật sự cần thay đổi kế hoạch theo tình huống và có quyền truy cập, eval, boundary đủ rõ. | Nhiều quyền truy cập, khó truy nguyên quyết định, có thể vượt phạm vi bàn giao. | Không chọn: các bước đã xác định trước, không có nhu cầu tự lập kế hoạch. |
 
-**Mức chọn:**
+**Mức chọn:** **Rule, không có bước AI.** Đây là lựa chọn giải pháp cho vòng kiểm chứng, tách biệt với quyết định triển khai ở mục 8.
 
-**Vì sao không chọn mức đơn giản hơn:**
+**Vì sao không chọn mức đơn giản hơn:** Hai người ở CP4 vẫn kiểm bằng tay và đều mô tả có gọi lỗi; việc tìm thủ công tiếp tục phụ thuộc người thực hiện đủ các phép kiểm. Rule có thể áp cùng một phép chuẩn hóa và so khớp cho mọi dòng, trong khi checklist vẫn giữ cho phần xác minh và bàn giao. Tuy nhiên, phỏng vấn chưa chứng minh Rule tốt hơn một checklist được chuẩn hóa: vòng thử phải so với **No AI + checklist**, không chỉ so với cách kiểm tay cũ. Nếu checklist đạt cùng chất lượng và thời gian với ít công vận hành hơn, chọn No AI.
+
+**Vì sao không cần mức cao hơn:** Chưa có bằng chứng ca cần hiểu ngữ nghĩa là nguyên nhân chính của lỗi. AI cũng không giải quyết được việc thiếu quyền đọc, bản dữ liệu cũ hay không có trạng thái thanh toán đáng tin cậy. Giữ các ca này cho con người giúp thu hẹp phạm vi mà không cần Workflow có AI hoặc Agent.
 
 ### 6.3. AI Canvas rút gọn
 
-| Thành phần                                                        | Nội dung |
-| ----------------------------------------------------------------- | -------- |
-| **Prediction** — AI dự đoán / tạo ra gì?                          |          |
-| **Judgment** — con người cân nhắc, quyết định gì?                 |          |
-| **Action** — hành động cuối cùng là gì, ai làm?                   |          |
-| **Outcome** — đo kết quả bằng gì?                                 |          |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? |          |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện?                   |          |
+**Không áp dụng**, theo hướng dẫn dành cho No AI/Rule trong [worksheet CP6](../../docs/01-worksheet.md#nếu-nhóm-chọn-no-ai-hoặc-rule) và tiêu chí C10 của [rubric](../../RUBRIC.md). Không có bước AI dự đoán hoặc tạo nội dung: công thức chỉ kiểm điều kiện và trả cờ; người chạy quảng cáo xác minh ngoại lệ và quyết định bàn giao.
+
+Dữ liệu Rule cần gồm lead mới, khóa số điện thoại trong bản đọc file tổng, nguồn trạng thái thanh toán và thời điểm đối chiếu. CP4 xác nhận có file tổng và hệ thống thanh toán; **chưa xác nhận quyền đọc bằng sheet riêng, khả năng xuất paid và độ trễ cập nhật**. Nếu không xuất được paid nhưng được phép tra web thì giữ bước tra thủ công; phản hồi sửa quy tắc lấy từ kết quả người duyệt và log lỗi Sales, không dùng để huấn luyện mô hình.
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng:
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào:
+Không áp dụng đánh giá AI vì mức chọn là Rule. Với giải pháp này, vẫn giữ hai cân nhắc thiết kế:
+
+- **Hỗ trợ người kiểm lead:** Rule gắn cờ, con người quyết định. Đây là lựa chọn thiết kế theo ràng buộc file chung và quy trình mục 4.2; CP4 chưa trực tiếp xác nhận người dùng muốn giao hẳn việc hay chỉ được hỗ trợ.
+- **Ưu tiên tránh bỏ sót lỗi bàn giao:** bỏ sót trùng/paid khiến Sales tiếp tục gọi nhầm; báo nhầm làm tăng công duyệt và có thể chậm liên hệ lead tốt. Vì vậy cờ phải kèm lý do, không tự xóa hoặc chặn vĩnh viễn lead. Không tra được paid, nguồn bị lỗi hoặc chưa đủ dữ liệu thì gắn **CHƯA RÕ**, người vận hành kiểm lại trước khi bàn giao. Đây là đánh giá rủi ro của nhóm, chưa phải kết quả đo chi phí hai loại lỗi.
+
+### 6.5. Sơ đồ phạm vi Rule và người kiểm tra
+
+Sơ đồ CP6 dưới đây diễn giải **phương án đề xuất** theo mô tả mục 4.2 và boundary v1. Đây là hình minh họa thiết kế, không phải ảnh kết quả chạy thử; dữ liệu đầu vào chỉ được dùng sau khi đáp ứng điều kiện mục 8.
+
+```mermaid
+flowchart TD
+  A["1. Người vận hành dán lead vào sheet kiểm riêng"] --> B["2. Rule chuẩn hóa số; giữ giá trị gốc"]
+  B --> C["3. Rule kiểm định dạng và gắn cờ"]
+  C --> D["4. Rule kiểm trùng trong lô và bản đọc file tổng"]
+  D --> E["5. Tra paid: Rule nếu có bản xuất được phép; nếu không thì tra web bằng tay"]
+  E --> F["6. Người vận hành kiểm nguồn hiện hành, duyệt cờ và lưu lý do"]
+  F --> G{"Đủ điều kiện bàn giao?"}
+  G -->|Có| H["7. Người vận hành nhập lead đã xác minh vào file tổng"]
+  H --> I["8. Sales gọi và ghi log kết quả"]
+  G -->|Không| J["Giữ chờ xác minh hoặc không bàn giao; lưu lý do, không tự xóa lead"]
+  D -.->|Nguồn lỗi hoặc chưa xác nhận dữ liệu mới| K["Quay về kiểm tay trên nguồn được phép; thiếu nguồn thì CHƯA RÕ"]
+  E -.->|Không xác minh được paid| K
+  K --> F
+```
+
+**Boundary của hình:** mọi công thức nằm trên sheet riêng; mũi tên sang file tổng ở bước 7 là thao tác của con người. Gắn cờ “trùng” hoặc “đã paid” không cho phép công cụ tự gộp, xóa hay thay đổi trạng thái khách; người duyệt ghi cách xử lý trước khi quyết định có bàn giao hay không.
 
 ---
 
@@ -298,29 +323,54 @@ Vì sao:
 
 | Trường                                          | Nội dung                        |
 | ----------------------------------------------- | ------------------------------- |
-| **Actor**                                       |                                 |
-| **Quy trình**                                   |                                 |
-| **Bottleneck**                                  |                                 |
-| **Impact**                                      |                                 |
-| **Success Metric** (baseline → target, cách đo) |                                 |
-| **Boundary**                                    |                                 |
-| **AI intervention point**                       |                                 |
-| **Mức chọn**                                    | No AI / Rule / Workflow / Agent |
-| **Rủi ro & người kiểm tra**                     |                                 |
+| **Actor** | Người chạy quảng cáo tự kiểm 10–50 lead/ngày trước khi nhập vào file tổng dùng chung; Sales là người nhận lead và ghi nhận cuộc gọi lỗi. |
+| **Quy trình** | Hiện tại: lọc lead → kiểm số → tra thanh toán → kiểm trùng → nhập file tổng → Sales gọi. Khi thử Rule: dán vào sheet kiểm riêng → chuẩn hóa số → kiểm định dạng → kiểm trùng → tra thanh toán → người duyệt ngoại lệ → người vận hành nhập lead đã xác minh vào file tổng → Sales gọi và ghi log. |
+| **Bottleneck** | Bước 2–4 hiện tại: kiểm tay số điện thoại, trạng thái thanh toán và trùng với file tổng. Điểm cần cải thiện là lỗi lọt sang Sales; kiểm được định dạng không có nghĩa là xác minh đúng chủ số. |
+| **Impact** | CP4 ghi nhận người 2 tự ước lượng 1–2 khách bị gọi trùng/nhầm mỗi 1–2 hôm; người 1 nêu khoảng 2 khách có số sai ở lần gần nhất. Thời gian kiểm 20–50 phút/ngày là tự thuật/quy đổi từ phỏng vấn. Chưa có baseline log xác nhận; không dùng 9–15 cuộc/tuần trong card làm số đã đo. |
+| **Success Metric** (baseline → target, cách đo) | **Chính:** baseline định hướng là ước lượng CP4 nêu trên; đo lại 5 ngày làm việc với No AI + checklist trước khi thử Rule. Target tạm giữ **≤1 khách bị gọi lỗi/5 ngày làm việc**, đồng thời tỷ lệ khách bị gọi lỗi không tăng so với baseline. **Phụ:** thời gian kiểm 20–50 phút/ngày → trung bình **≤20 phút/ngày** trong 5 ngày thử, tính cả thời gian duyệt cờ và tra paid thủ công. Cách ghi log, mẫu số và điều kiện so sánh ở dưới; các target là đề xuất cần xác nhận sau đo baseline, chưa phải kết quả. |
+| **Boundary** | Công thức chỉ chạy trên sheet riêng, chỉ đọc file tổng; chỉ con người nhập lead đã kiểm bằng thao tác hiện hành. Không tự ghi/sửa/xóa trên file tổng, tự xóa lead, gộp khách, phân bổ hoa hồng hoặc đổi trạng thái thanh toán. Không tìm thấy paid hoặc thiếu nguồn thì CHƯA RÕ. Mọi cờ phải được người vận hành xử lý trước bàn giao. Không suy ra số đúng chủ chỉ từ định dạng; không kết luận hai số khác nhau là hai người khác nhau. |
+| **AI intervention point** | **Không có.** Chuẩn hóa, kiểm định dạng và so khớp chính xác dùng logic cố định; ca thiếu thông tin hoặc nghi trùng do con người xác minh, không để AI đoán. |
+| **Mức chọn** | **Rule kết hợp người duyệt**, đối chứng với No AI + checklist. |
+| **Rủi ro & người kiểm tra** | Người chạy quảng cáo kiểm cờ, nguồn/thời điểm tra paid và làm mới bản đọc ngay trước bàn giao; nếu không xác nhận được dữ liệu mới thì kiểm tay trên nguồn. Sales ghi lỗi theo loại. Người quản lý dữ liệu xác nhận quyền dùng sheet riêng và cách bàn giao. Lê Nguyễn Anh Nhân tổng hợp kết quả theo tiêu chí CP6; các vai trò vận hành bên ngoài nhóm cần xác nhận trước khi thử thật. |
+
+**Quy ước đo để không gộp sai các loại lỗi:**
+
+- Dùng mã lead/khách nội bộ để đối chiếu trong môi trường được phép; báo cáo chỉ giữ số tổng hợp, không đưa số điện thoại thật vào repo. Sales đánh dấu ba loại: **gọi trùng**, **đã thanh toán trước lúc gọi**, **số sai/không đúng khách**; một khách có thể mang nhiều nhãn nhưng chỉ tính một lần trong tổng khách bị gọi lỗi của một tuần.
+- Ghi riêng lỗi số **sai định dạng** và số **đúng định dạng nhưng sai thực tế**; loại sau không được tính là Rule có khả năng phát hiện chắc chắn. Chỉ xác nhận lỗi gọi khách đã thanh toán khi đối chiếu được trạng thái và thời điểm ở nguồn; ca chưa rõ giữ riêng, không coi là không lỗi.
+- Tỷ lệ lỗi = số khách bị gọi lỗi / số khách đã được gọi trong cùng giai đoạn; nếu mẫu số bằng 0 thì chưa đủ dữ liệu kết luận. Ghi thêm tổng lead/ngày để biết hai giai đoạn có tương đương về khối lượng không. Dùng cùng cách nhận diện khách, phân loại lỗi và ghi thời gian ở cả hai giai đoạn.
+- Bấm giờ từ lúc bắt đầu kiểm lô đến khi có danh sách sẵn sàng bàn giao; cộng tất cả lô trong ngày, gồm kiểm tay bổ sung và duyệt cờ, không gồm thời gian Sales gọi. Nếu thiếu log hoặc khối lượng thay đổi đáng kể, kết quả chỉ dùng thăm dò, không tuyên bố đã đạt hiệu quả.
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0  | v1  | Vì sao đổi |
 | ------ | --- | --- | ---------- |
-|        |     |     |            |
+| Success Metric | Gộp lỗi trong một chỉ số; baseline dự kiến đo 1 tuần, target ≤1 khách/tuần và ≤20 phút/ngày. | Tách nhãn ba loại lỗi; đếm khách không trùng lặp; thêm tỷ lệ lỗi theo số khách đã gọi và quy ước bấm giờ. So baseline No AI + checklist với Rule trong hai giai đoạn 5 ngày làm việc. | Tránh coi số đúng định dạng là đúng khách, tránh giảm số lỗi chỉ vì gọi ít khách hơn, và kiểm tra Rule có hơn mức đơn giản hơn không. |
+| Boundary | Không tự sửa file tổng, xóa/gộp lead, đổi paid; người duyệt cờ. | Làm rõ không suy ra đúng chủ số hay nhận diện khách nhiều số; nguồn thiếu/cũ phải kiểm tay hoặc giữ CHƯA RÕ; chỉ người nhập bằng thao tác hiện hành. | Phản biện v0 chỉ ra giới hạn kiểm định dạng và bản đọc trễ; cần tránh cờ “sạch” tạo cảm giác đã xác minh hoàn toàn. |
+| Quy trình | Mô tả 6 bước hiện tại. | Giữ quy trình hiện tại và nêu điểm đặt Rule trong quy trình 8 bước ở mục 4.2, kèm log Sales. | Xác định chính xác phép kiểm được thay thế và người chịu trách nhiệm bàn giao. |
+| AI intervention point / Mức chọn / Rủi ro & người kiểm tra | Chưa có ba trường này. | Không có bước AI; chọn Rule để kiểm chứng, ghi rõ người duyệt và điều kiện quyền dữ liệu. | Hoàn thiện v1 theo CP6 mà không thêm bước AI ngoài nhu cầu đã kiểm chứng. |
 
-**Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
+**Tiêu chí đánh giá đầu ra Rule (5 tiêu chí, theo ngoại lệ No AI/Rule của C9):**
+
+Trước thử thật, dùng bộ dữ liệu giả lập có đáp án do người kiểm tra xác nhận: số có cách ghi khác nhau, số sai định dạng, trùng trong lô, trùng file tổng, paid/chưa paid/chưa rõ, nguồn lỗi/cũ và ca một người nhiều số. Đây là **kế hoạch kiểm thử**, chưa có kết quả chạy; không coi dữ liệu giả lập là bằng chứng phỏng vấn hoặc hiệu quả vận hành.
 
 |   # | Tiêu chí | Đạt khi | Không đạt khi |
 | --: | -------- | ------- | ------------- |
-|   1 |          |         |               |
-|   2 |          |         |               |
-|   3 |          |         |               |
+| 1 | Chuẩn hóa và kiểm định dạng | 100% ca trong bộ mẫu đã chốt giữ được số gốc, tạo đúng khóa chuẩn và cờ theo quy ước số được phép dùng; số thiếu/thừa ký tự hoặc không chuẩn hóa chắc chắn được đưa cho người xem. | Mất số 0 đầu do lưu dạng số, tạo khóa sai, bỏ mất giá trị gốc, hoặc coi “đúng định dạng” là “đúng khách”. |
+| 2 | Kiểm trùng chính xác | Mọi ca trùng khóa sau chuẩn hóa trong cùng lô hoặc với bản đọc file tổng đều có cờ và chỉ ra dòng/nguồn khớp; ca nghi một người nhiều số chuyển người duyệt, không tự gộp. | Bỏ sót ca trùng chính xác có trong mẫu, gắn cờ không truy được nguồn hoặc tự gộp hai khách chỉ vì tên giống nhau. |
+| 3 | Đối chiếu thanh toán và tình trạng nguồn | Ca đã thanh toán có bằng chứng nguồn được gắn đúng cờ; chỉ xác nhận chưa thanh toán khi nguồn hiện hành xác nhận; không tìm thấy, nguồn lỗi/cũ hoặc xung đột đều CHƯA RÕ và được kiểm tay trước bàn giao. | Không tìm thấy được mặc định thành chưa thanh toán, hoặc nguồn lỗi/cũ vẫn cho qua mà không có người xác minh. |
+| 4 | Giữ boundary và người duyệt | Không có thao tác tự ghi/sửa/xóa file tổng; 100% lead có cờ có lý do xử lý và người duyệt trước bàn giao; người vận hành làm mới/đối chiếu nguồn trước khi nhập. | Có một lần ghi tự động vào file chung, tự xóa/gộp/đổi paid, hoặc bàn giao lead có cờ chưa xử lý. |
+| 5 | Có thể đối chiếu và đo hiệu quả | Số dòng đầu vào bằng tổng dòng đã xử lý và dòng đang chờ, không mất lead; mọi dòng truy được về dữ liệu gốc và cờ. Khi pilot đủ log: ≤1 khách gọi lỗi/5 ngày, tỷ lệ lỗi không tăng và thời gian kiểm trung bình ≤20 phút/ngày. | Mất dòng, không truy được lý do, thiếu log để kết luận hoặc không đạt một trong các ngưỡng pilot; nếu No AI cũng đạt tương đương với ít công hơn thì chưa chứng minh cần Rule. |
+
+**Dẫn chứng dùng cho CP6 và mục 8–9:**
+
+| Nhận định / quyết định | Nguồn trong hồ sơ | Giới hạn của bằng chứng |
+|---|---|---|
+| C08 có lỗi bàn giao; thời gian thực tế thấp hơn giả định ban đầu. | [Mục 3.2 — hai Interview Snapshot](#32-kiểm-chứng), đối chiếu [ảnh phỏng vấn 1](../assets/cp4-interview-1.jpg) và [ảnh phỏng vấn 2](../assets/cp4-interview-2.jpg). | Người 1 tự thuật 20 phút/ngày; người 2 nêu 10 phút/10 lead và 20–50 lead/ngày, nhóm quy đổi thành 20–50 phút/ngày. Số lỗi chưa có log xác nhận. |
+| Rule cần tránh tác động file tổng dùng chung; paid cần lấy từ hệ thống nguồn. | Các câu trả lời trong hai ảnh ở trên; [mục 3.1 — giả định #2, #5, #6](#31-assumption-map). | Có bằng chứng về ràng buộc file chung và hệ thống cập nhật paid; chưa chứng minh quyền dùng sheet riêng, khả năng xuất hoặc độ trễ nguồn. |
+| Có hướng chuẩn hóa, kiểm trùng và tra cứu bằng công thức; chưa cần AI. | [Mục 3.3 — research giải pháp đã có](#33-research-giải-pháp-đã-có), với tài liệu chính thức REGEXREPLACE, COUNTIF, XLOOKUP, HubSpot và Salesforce. | Khả năng công cụ không chứng minh hiệu quả trên dữ liệu nhóm. Phạm vi CP6 chỉ dùng so khớp xác định và người duyệt. |
+| V1 cần tách loại lỗi, kiểm nguồn cập nhật và có người chịu trách nhiệm đo. | [Mục 5 — v0 và bảng phản biện](#5-problem-statement-v0-cp5); [mục 4.2 — mô tả quy trình tương lai](#42-quy-trình-tương-lai). | Kế thừa mô tả sheet riêng; ảnh CP5 còn điểm cần đối chiếu như ghi ở mục 9.1. Sơ đồ mục 6.5 làm rõ phạm vi đề xuất CP6. |
+| Chọn Rule, ghi Không có ở AI intervention point và đánh giá đầu ra không AI là hợp lệ. | [Worksheet — No AI/Rule](../../docs/01-worksheet.md#nếu-nhóm-chọn-no-ai-hoặc-rule); [rubric — C9, C10, C11](../../RUBRIC.md). | Đây là căn cứ yêu cầu bài nộp, không phải kết quả kiểm chứng người dùng. |
+| Not Yet, target, lịch kiểm chứng và ngưỡng dừng. | Mục 7–8: đề xuất phân tích từ giới hạn bằng chứng ở CP4–CP5. | Chưa có pilot/log thật; không diễn đạt các ngưỡng hoặc thời hạn đề xuất thành kết quả đã đạt hay cam kết đã nhận. |
 
 ---
 
@@ -330,29 +380,75 @@ Vì sao:
 
 | Rủi ro          | Câu hỏi                                                           | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 | --------------- | ----------------------------------------------------------------- | ----------------------------------------------------- | ------------------ |
-| **Value**       | Người dùng có thật sự cần và sẽ dùng không?                       |                                                       |                    |
-| **Usability**   | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? |                                                       |                    |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không?                     |                                                       |                    |
-| **Viability**   | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành?     |                                                       |                    |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | **Trung bình** | 2/2 người ở CP4 kiểm tay và mô tả gọi lỗi; nhưng chưa có log, chưa thử checklist chuẩn và chưa có cam kết dùng sheet riêng. Cần đối chứng No AI, đo baseline và xác nhận một người sẵn sàng thử trước khi kết luận Rule tạo thêm giá trị. |
+| **Usability** | Người dùng có hiểu cờ và sửa được đầu ra Rule không? | **Trung bình** | Bảng tính gần với cách làm hiện tại nhưng thêm sheet riêng và bước duyệt cờ. Chưa quan sát người dùng thao tác; có thể bỏ qua CHƯA RÕ hoặc hiểu nhầm số hợp lệ là đúng khách. Kiểm bằng một lượt người vận hành tự xử lý bộ mẫu, yêu cầu giải thích đúng cờ và không bàn giao ca chưa xác minh. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | **Cao** | Logic công thức có hướng làm ở CP4, nhưng chưa có mẫu chạy thử, chưa xác nhận đọc file tổng bằng sheet riêng, nguồn paid xuất được hay phải tra web, và độ trễ cập nhật. Không mặc định file .xlsx dùng được cách kết nối đề xuất ở CP5. Cần thử quyền đọc/làm mới trong công cụ thực tế; paid có thể giữ tra tay. |
+| **Viability** | Có hợp chi phí, quy định tổ chức không? Ai vận hành? | **Cao** | CP4 giả định #6 còn chờ người quản lý cho phép dùng dữ liệu mẫu. Chưa xác nhận được phép sao dữ liệu sang sheet riêng, người chịu trách nhiệm duyệt và Sales đồng ý ghi log. Cần xác nhận các vai trò, nơi lưu, phạm vi truy cập và công vận hành; không đưa dữ liệu khách vào AI hoặc repo. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go / Not Yet / No-Go
+**Quyết định:** **Not Yet với triển khai trên dữ liệu thật; ưu tiên kiểm chứng Rule.** Chưa có căn cứ dùng Workflow có AI hoặc Agent. Quyết định CP6 này nhất quán với trạng thái phân tích ở mục 1.
 
-**Lý do:**
+**Lý do:** Pain có tín hiệu thật, nhưng Feasibility và Viability còn mức Cao, kiểm chứng được trong phạm vi nhỏ. Chọn Rule về mặt thiết kế chưa đủ để Go khi quyền dữ liệu, độ mới của nguồn và trách nhiệm ghi log chưa xác nhận. Không dùng việc công thức có sẵn làm bằng chứng giải pháp đã hoạt động ở môi trường người dùng.
 
-**Nếu Go — pilot nhỏ nhất:**
+**Nếu Not Yet — cần kiểm chứng gì trước:** Trong **5 ngày làm việc kể từ khi bắt đầu bước kiểm chứng**, thực hiện các việc sau. Đây là kế hoạch bước tiếp theo, chưa phải cam kết đã có của người vận hành.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:**
+| Việc cần chốt | Người phụ trách / cần xác nhận | Điều kiện hoàn tất |
+|---|---|---|
+| Quyền dữ liệu và môi trường thử | Nhân tổng hợp yêu cầu; Tiệp hỗ trợ liên hệ; người quản lý dữ liệu xác nhận. | Được phép thử trên dữ liệu mẫu đã bảo vệ, dùng sheet riêng với phạm vi đọc rõ ràng và không tác động file chung; chưa được phép thì chỉ dùng dữ liệu giả lập. |
+| Đọc file tổng và tra paid | Người chạy quảng cáo kiểm cùng nhóm; Tiệp hỗ trợ làm rõ nguồn. | Đọc/làm mới được trong công cụ thực tế; chỉ rõ nguồn và thời điểm tra paid. Nếu không xuất paid được thì tra web thủ công; không kiểm chứng được nguồn hiện hành thì không bàn giao theo kết quả Rule. |
+| Người duyệt và log kết quả | Người chạy quảng cáo, Sales và quản lý xác nhận; Diên hỗ trợ điều phối. | Có người duyệt cờ, Sales đồng ý ghi log đủ mẫu số/loại lỗi và có nơi lưu phù hợp. |
+| Đầu ra và thao tác người dùng | Nhân đối chiếu theo 5 tiêu chí mục 7; người vận hành kiểm bộ mẫu. | Các tiêu chí 1–4 và phần bảo toàn/truy vết ở tiêu chí 5 đều đạt trên mẫu; người vận hành giải thích được cờ, xử lý đúng ca CHƯA RÕ và phương án quay về. |
 
-**Nếu No-Go — nên làm gì thay AI:**
+**Nếu Go — pilot nhỏ nhất sau khi vượt các điều kiện trên:** Một người chạy quảng cáo, một sản phẩm, một sheet kiểm riêng và một đầu mối Sales, trong **10 ngày làm việc**: 5 ngày baseline No AI + checklist, tiếp theo 5 ngày thử Rule. Không tích hợp tự nhập file tổng, không tự gọi, không đưa dữ liệu thật vào AI. Nhân tổng hợp log mỗi giai đoạn theo mục 7; giữ nguyên bước tra paid bằng tay nếu chưa có bản xuất phù hợp. Chỉ kết luận hiệu quả khi đủ log, có khách được gọi và khối lượng hai giai đoạn so sánh được. Đây là kế hoạch có điều kiện, không phải Go hiện tại.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …):
+**Nếu No-Go — nên làm gì thay AI:** Nếu không được phép đọc/sao dữ liệu hoặc công vận hành lớn hơn lợi ích, giữ No AI + checklist trên các nguồn đang được phép dùng: chuẩn hóa cách nhập, tìm trùng trong file tổng, tra paid trên web và người duyệt trước bàn giao. Nếu No AI đạt target với ít công hơn, dừng phương án Rule; không nâng lên AI chỉ để thay một giải pháp chưa chứng minh giá trị.
+
+**Ngưỡng dừng:**
+
+- **Sau 5 ngày kiểm chứng**, nếu chưa có quyền dùng dữ liệu, nguồn đối chiếu hiện hành hoặc người duyệt/ghi log thì **không mở pilot thật**; quay về No AI + checklist trong phạm vi quyền hiện có. Chỉ xét lại khi điều kiện thiếu được đáp ứng.
+- **Dừng ngay** nếu có một lần công cụ tự ghi/sửa/xóa file tổng, làm lộ dữ liệu ngoài nơi được phép hoặc chuyển lead có cờ chưa duyệt sang Sales. Quay về kiểm tay và chỉ thử lại sau khi tìm nguyên nhân, sửa và kiểm lại trên mẫu.
+- **Trong pilot**, nếu mất kết nối, không xác nhận được nguồn mới hoặc tra paid thất bại thì ngừng dùng cờ “sạch” của lô đó; người vận hành kiểm tay trên nguồn được phép. Nếu vẫn không xác minh được, giữ lead chờ thay vì chuyển tiếp.
+- **Sau 5 ngày thử Rule đủ log**, nếu có **trên 1 khách bị gọi lỗi**, tỷ lệ lỗi tăng so với baseline hoặc thời gian kiểm trung bình **trên 20 phút/ngày**, dừng mở rộng, quay về No AI + checklist để phân tích lỗi. Nếu thiếu log/khối lượng không so sánh được, giữ Not Yet, không tuyên bố thành công.
+- Nếu No AI + checklist đạt cùng target với công vận hành thấp hơn, chọn No AI. Các ngưỡng là tiêu chí đề xuất trước thử, cần người vận hành xác nhận sau khi có baseline; mọi điều chỉnh phải ghi lý do trước giai đoạn Rule, không sửa ngưỡng sau thử để hợp thức hóa kết quả.
+
+### 8.3. Cách xét lại quyết định sau kiểm chứng
+
+Quyết định hiện tại vẫn là **Not Yet**. Bảng dưới quy định cách xét lại, không ghi nhận các điều kiện đã hoàn thành.
+
+| Kết quả kiểm chứng | Quyết định tiếp theo | Căn cứ phải lưu |
+|---|---|---|
+| Đủ quyền dữ liệu, nguồn đối chiếu hiện hành, người duyệt/ghi log; bộ mẫu đạt điều kiện mục 8.2; đo được baseline. | **Go cho pilot Rule phạm vi nhỏ**, chưa triển khai rộng. Nếu checklist baseline đã đạt target, chỉ thử Rule khi còn lợi ích cần kiểm chứng và người vận hành đồng ý. | Xác nhận phạm vi quyền, kết quả kiểm bộ mẫu, log baseline và target chốt trước giai đoạn Rule. |
+| Còn thiếu một điều kiện có thể bổ sung, hoặc log chưa đủ/khối lượng chưa so sánh được. | **Giữ Not Yet**; ghi rõ điều kiện thiếu, người cần xác nhận và lần xem xét tiếp theo. Không lấy dữ liệu thiếu làm bằng chứng đạt target. | Danh sách điều kiện chưa đạt và lý do; không tự điền số lỗi bằng 0 cho ngày không có log. |
+| Không được phép dùng sheet riêng, không có cách xác minh nguồn phù hợp, hoặc No AI đạt cùng mục tiêu với công vận hành thấp hơn. | **No-Go với phương án Rule hiện tại**; dùng No AI + checklist trong phạm vi quyền hiện có. Không đồng nghĩa problem không có thật. | Lý do không thể đáp ứng điều kiện hoặc bảng đối chiếu hiệu quả và công vận hành của hai cách. |
+
+**Cách tổng kết pilot:** Nhân tổng hợp số liệu, người chạy quảng cáo đối chiếu thời gian/cờ đã xử lý, Sales xác nhận log lỗi; đây là phân công đề xuất cho bước tiếp theo. Bảng tổng kết cần có số ngày đủ log, tổng lead, số khách đã gọi, số khách gọi lỗi theo từng loại và tổng không đếm trùng, tỷ lệ lỗi, thời gian kiểm trung bình/ngày, số ca CHƯA RÕ còn chờ và sự cố boundary. Tính thêm thời gian tạo, sửa và bảo trì sheet để so công vận hành; không gộp chi phí thiết lập một lần vào thời gian kiểm lead hằng ngày rồi so lệch với baseline.
+
+Chỉ đề xuất tiếp tục trong phạm vi pilot khi đạt toàn bộ ngưỡng mục 7–8, không có sự cố boundary và không còn ca chưa rõ làm sai lệch kết luận. Nếu baseline có 0 khách gọi lỗi, Rule cũng có 0 lỗi chỉ chứng minh chưa quan sát lỗi trong mẫu; cần xét thời gian và công vận hành, không tuyên bố đã giảm lỗi. Việc mở rộng sang nhiều người hoặc sản phẩm cần một vòng đánh giá riêng về nhập đồng thời, quyền dữ liệu và trách nhiệm vận hành.
 
 ---
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+### 9.1. Hạn chế của kết luận hiện tại
+
+| Hạn chế | Ảnh hưởng tới kết luận | Cách xử lý tiếp theo |
+|---|---|---|
+| **Mẫu kiểm chứng nhỏ:** mới có 2 người ngoài nhóm làm marketing và tự lọc lead, chưa có quan sát trực tiếp hay phỏng vấn Sales/người quản lý dữ liệu trong hồ sơ. | Xác nhận được tín hiệu pain ở hai trường hợp, chưa suy rộng cho mọi team marketing hoặc khẳng định họ sẽ dùng sheet riêng. | Xác nhận quy trình bàn giao với một đầu mối Sales và quyền dùng dữ liệu với người quản lý; thử thao tác với người vận hành thật khi được phép. |
+| **Số liệu còn tự thuật:** 20–50 phút/ngày có phần quy đổi từ “10 phút/10 lead”; số lỗi là ước lượng, chưa có log baseline. | Không thể dùng số liệu này để tính mức tiết kiệm, ROI hoặc tỷ lệ giảm lỗi đã đạt; target ≤1 khách/tuần và ≤20 phút/ngày còn tạm. | Đo 5 ngày No AI + checklist theo quy ước mục 7; ghi đủ mẫu số và chốt target trước giai đoạn Rule. |
+| **Chưa chạy giải pháp:** chưa có kết quả kiểm công thức, độ mới của bản đọc, khả năng xuất paid hoặc khả năng người dùng hiểu cờ. | Tài liệu công cụ ở CP4 chỉ chứng minh có hướng làm; chưa chứng minh giải pháp khả thi trong môi trường thực tế. | Kiểm trên dữ liệu giả lập trước; sau khi có quyền mới dùng mẫu phù hợp trong môi trường được phép, ghi kết quả theo 5 tiêu chí mục 7. |
+| **Giới hạn nhận diện:** khóa số điện thoại không giải quyết chắc chắn một người nhiều số, nhiều người chung số hoặc số đúng định dạng nhưng nhập nhầm. | Rule có thể bỏ sót hoặc gắn cờ nhầm; không thể cam kết loại hết cuộc gọi lỗi. | Giữ dữ liệu gốc, lý do cờ và người duyệt; ghi riêng lỗi ngoài khả năng Rule để đánh giá phạm vi thay vì tự gộp khách hoặc thêm AI ngay. |
+| **Rủi ro thời điểm và nhập đồng thời:** làm mới bản đọc không khóa được file tổng; người khác có thể thêm lead sau lúc kiểm. | Một pilot chỉ có một người không chứng minh đã giải quyết trùng chéo của cả team; tra paid hiện hành cũng cần kiểm lại sát bàn giao. | Trong pilot, người vận hành kiểm lại nguồn ngay trước nhập; chưa chắc thì giữ chờ. Trước mở rộng, thử tình huống hai người cùng bàn giao và thống nhất trách nhiệm xử lý; không tuyên bố Rule đã loại được tranh chấp đồng thời. |
+| **Đặc tả CP5 có điểm cần đối chiếu:** mô tả mục 4.2 là sheet riêng chỉ đọc, trong khi ảnh minh họa có bước dán vào file tổng và lead tự hiện ở tab Sales. | Có thể triển khai lệch boundary nếu dùng ảnh làm hướng dẫn thao tác mà chưa thống nhất. | CP6 dùng phạm vi sheet riêng, con người nhập theo mục 7; trước pilot cần người phụ trách quy trình xác nhận một hướng dẫn thống nhất. Lượt bổ sung mục 8–9 này không sửa mục 4 hoặc ảnh. |
+| **Pilot ngắn, so sánh trước/sau:** hai giai đoạn có thể khác lượng lead, chiến dịch và cách Sales gọi; baseline đã dùng checklist nên không đại diện nguyên trạng kiểm tay ban đầu. | Kết quả chỉ giúp chọn bước tiếp theo trong phạm vi nhỏ, chưa chứng minh quan hệ nhân quả hoặc hiệu quả dài hạn. | Ghi bối cảnh từng ngày, so cùng cách đếm/cách bấm giờ và công vận hành; nếu khối lượng khác đáng kể hoặc lỗi quá ít để đánh giá, giữ kết luận thăm dò và đề xuất đo thêm trước mở rộng. |
+
+### 9.2. Thứ tự công việc tiếp theo
+
+1. **Chốt điều kiện trong tối đa 5 ngày làm việc:** xác nhận quyền dữ liệu, công cụ thực tế, cách làm mới/tra paid, người duyệt và Sales ghi log; thống nhất hướng dẫn theo boundary CP6. Có thể kiểm bộ mẫu giả lập trong lúc chờ, nhưng không dùng dữ liệu khách thật khi chưa được phép.
+2. **Đo baseline trong 5 ngày làm việc sau khi đủ điều kiện:** áp dụng No AI + checklist, ghi số khách gọi lỗi, tỷ lệ lỗi và thời gian kiểm theo mục 7. Xem xét checklist đã đủ chưa; chốt target và quy tắc xử lý ngoại lệ trước bước thử Rule.
+3. **Chỉ thử Rule trong 5 ngày làm việc tiếp theo nếu còn giả thuyết giá trị cần kiểm chứng:** giữ phạm vi một người/một sản phẩm, lưu kết quả kiểm mẫu, log vận hành và các ca người duyệt sửa cờ. Áp dụng ngưỡng dừng ngay khi phát sinh, không chờ hết tuần nếu vi phạm boundary.
+4. **Tổng kết và chọn bước tiếp theo:** đối chiếu bảng mục 8.3 để tiếp tục pilot, giữ Not Yet hoặc quay về No AI. Chỉ cân nhắc thêm AI nếu dữ liệu ngoại lệ cho thấy một nhu cầu suy luận cụ thể mà Rule và người duyệt chưa xử lý hiệu quả, đồng thời đã có nguồn dữ liệu được phép và bộ eval phù hợp; hiện tại chưa có bằng chứng đó.
+
+**Đầu ra cần có của vòng tiếp theo:** xác nhận điều kiện vận hành; kết quả bộ mẫu theo 5 tiêu chí; bảng baseline/Rule có đủ mẫu số và thời gian; danh sách ngoại lệ/sự cố; quyết định xét lại có lý do. Dữ liệu chi tiết lưu trong môi trường được phép; báo cáo nhóm chỉ cập nhật số tổng hợp và bằng chứng đã loại thông tin khách hàng. Các đầu ra này là kế hoạch, chưa phải kết quả đã thu thập.
 
 ## 10. Tài liệu tham khảo
