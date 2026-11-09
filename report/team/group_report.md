@@ -1,75 +1,92 @@
 # Báo cáo nhóm — Day 02 Discovery & Problem Framing
 
-> Bản chung của nhóm, viết trên repo do nhóm trưởng fork. Không copy file này sang repo cá nhân.
-> Template chi tiết và prompt mẫu: [docs/01-worksheet.md](../../docs/01-worksheet.md). Bài mẫu: [docs/02-deliverable-example.md](../../docs/02-deliverable-example.md).
+## 1. Thông tin nhóm và trạng thái báo cáo
 
-## 1. Thông tin nhóm
+- Tên nhóm: **AIphevat**.
+- Thành viên và phân công: xem [TEAM.md](../../TEAM.md); 
+- Candidate **đề xuất**: **C08 - Kiểm tra lead trùng và trạng thái đã thanh toán trước khi bàn giao cho Sales**.
+- Quyết định phân tích sơ bộ: **Not Yet** với việc triển khai; ưu tiên kiểm chứng phương án **Rule**, chưa có căn cứ cần AI.
 
-- Tên nhóm:
-- Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
-- Quyết định cuối: Go / Not Yet / No-Go
+## 2. Hội tụ và đánh giá 12 candidate (CP3)
 
----
+### 2.1. Danh mục chuẩn bị pitch
 
-## 2. Hội tụ nhóm (CP3)
+Cột cuối là **câu hỏi AI đề xuất**, chưa phải câu hỏi thành viên đã đặt trong buổi pitch. Chưa có dữ liệu người hỏi hoặc biên bản thảo luận.
 
-### 2.1. Pitch
+| ID | Người đưa ra / nguồn | Candidate, actor và nhu cầu | Bottleneck / bằng chứng trong nguồn | Câu hỏi đề xuất để nhóm tự thảo luận |
+|---|---|---|---|---|
+| C01 | Đinh Phúc Diên | Người tự học cần quay lại tập trung sau khi dùng điện thoại. | Dùng điện thoại 15–30 phút tùy lần, sau đó khoảng 30 phút lấy lại tập trung; tần suất chưa đo. | Để điện thoại xa ngay từ đầu có đủ giải quyết không? |
+| C02 | Đinh Phúc Diên | Người học cần tìm lại công thức toán ghi trong vở giấy. | Một lần tìm thủ công khoảng 20 phút. | Mất thời gian do không nhớ vở, trang hay chủ đề? |
+| C03 | Đinh Phúc Diên | Người học cần vào giấc và duy trì giấc ngủ để tập trung hôm sau. | Đợt khó ngủ 3–4 ngày; khoảng 120 phút vào giấc, 20 phút ngủ lại. | Nhóm có đủ dữ liệu và năng lực để xác định phạm vi hỗ trợ không? |
+| C04 | Lê Nguyễn Anh Nhân | Giáo viên cần chỉnh sửa nội dung tài liệu chỉ có bản scan. | Kịch bản nhập lại ước tính 35 phút/tài liệu; chưa có file thử. | Xin bản gốc hoặc công cụ đã có có đủ đáp ứng không? |
+| C05 | Lê Nguyễn Anh Nhân | Giáo viên cần chuẩn bị giáo án điện tử sau buổi dạy. | Tổng ước tính 80 phút; soạn nội dung 25 phút và thao tác công cụ 10 phút. | Bước nghẽn là soạn chuyên môn hay học thao tác? |
+| C06 | Lê Nguyễn Anh Nhân | Sinh viên mới đến Hà Nội cần chọn cách đi đến nơi chưa quen. | Ước tính 25 phút/lần tìm tuyến mới, bước 3–5 chiếm 18 phút. | Nguồn thông tin nào thực sự thiếu hoặc khó đối chiếu? |
+| C07 | Nguyễn Nghiêm Khánh Tiệp | Kế toán xã cần tổng hợp dữ liệu khoảng 10 xóm để làm lương/BHXH. | Tổng nguồn nêu 2–3 ngày công/tháng; bước gõ lại nêu 7 giờ nhưng sơ đồ ghi 480 phút. | Mẫu chung xử lý được bao nhiêu và còn bao nhiêu ảnh viết tay? |
+| C08 | Nguyễn Nghiêm Khánh Tiệp | Người chạy quảng cáo cần loại lead trùng/đã paid trước khi bàn giao Sales. | 2–3 giờ/ngày/người; dò trùng 70 phút, dò paid 50 phút; 9–15 cuộc gọi sai/nhầm mỗi tuần theo nguồn. | Có danh sách paid cập nhật và khóa nhận diện khách đáng tin cậy không? |
+| C09 | Nguyễn Nghiêm Khánh Tiệp | Người làm content cần tìm trend phù hợp để chuẩn bị ít nhất 5 ý tưởng/ngày. | Tìm trend khoảng 60–90 phút/ngày; chất lượng ý tưởng chưa có baseline. | Tìm trend hay đánh giá độ phù hợp mới là bước nghẽn? |
+| C10 | Nguyễn Trọng Nghĩa | Sinh viên cần tìm lại cách sửa lỗi lab đã được thảo luận. | Tìm 20–30 phút; lướt ngữ cảnh 15–20 phút; thời gian chờ trả lời chưa đo. | FAQ hoặc thread có tag có đủ thay cho tìm kiếm nâng cao không? |
+| C11 | Nguyễn Trọng Nghĩa | Người làm slide cần thống nhất số liệu/luận điểm với báo cáo. | Nguồn nêu 60–75 phút/đợt; dò đối chiếu 40–50 phút. | Có cặp slide–báo cáo để xác nhận lỗi và thời gian không? |
+| C12 | Nguyễn Trọng Nghĩa | Người luyện lập trình cần nhớ pattern và lỗi cũ để tránh lặp lại. | Nguồn nêu 3 bài từng AC nhưng làm lại WA; ghi chú bị bỏ qua. | WA có chắc do lỗi cũ và có lịch sử submission chứng minh không? |
 
-| # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
-|---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+### 2.2. Cluster theo pain
 
-### 2.2. Cluster
-
-| Cluster | Các candidate | Pattern chung |
+| Cluster | Candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A — Duy trì trạng thái học tập | C01, C03 | Gián đoạn sự tập trung hoặc trạng thái nghỉ ngơi ảnh hưởng việc học. |
+| B — Tìm lại và sử dụng kiến thức | C02, C10, C12 | Khó lấy lại thông tin hoặc kinh nghiệm đã có khi cần dùng. |
+| C — Chuẩn bị và kiểm tra tài liệu | C04, C05, C11 | Chuyển đổi, soạn hoặc đối chiếu nội dung trước khi sử dụng. |
+| D — Tổng hợp dữ liệu và kiểm tra sai lệch | C07, C08 | Đầu vào phân tán, cần chuẩn hóa và đối chiếu trước khi bàn giao. |
+| E — Tìm và đánh giá thông tin mới | C06, C09 | Phải tìm nhiều nguồn và chọn thông tin phù hợp bối cảnh. |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
-Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
+Cây dưới đây áp dụng cho **C08 được đề xuất**, không ép cả 12 vấn đề khác domain vào một outcome giả tạo.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME ĐỀ XUẤT: Giảm thời gian kiểm tra/bàn giao lead từ 2–3 giờ
+xuống ≤30 phút/ngày/người và số cuộc gọi sai/nhầm từ 9–15 xuống ≤2/tuần
+(baseline theo card, cần xác minh; target chưa được nhóm chốt).
+├── Khó biết một khách đã xuất hiện trong các file khác hoặc file tổng chưa.
+├── Khó đối chiếu trạng thái đã thanh toán vì thông tin nằm ở nguồn khác.
+├── Cách ghi số điện thoại và tên không nhất quán gây khó đối chiếu.
+└── Bàn giao gần đồng thời khiến khó phát hiện lead vừa được người khác thêm.
 ```
 
-Những ý đã gạch bỏ vì là solution đội lốt opportunity:
+### 2.4. Bảng chấm điểm đầy đủ và xếp hạng
 
--
+| Rank | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức Lab | So sánh 4 mức | Hiểu domain | Tổng /35 |
+|---:|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| 1 | C08 — Kiểm tra lead trùng/đã paid | 4 | 5 | 3 | 4 | 4 | 5 | 3 | 28 |
+| 2 | C10 — Tìm cách sửa lỗi lab trong chat | 4 | 4 | 3 | 4 | 4 | 4 | 3 | 26 |
+| 3 | C11 — Đối chiếu slide và báo cáo | 4 | 4 | 3 | 4 | 4 | 4 | 3 | 26 |
+| 4 | C02 — Tìm ghi chú công thức toán | 4 | 3 | 3 | 3 | 5 | 3 | 3 | 24 |
+| 5 | C01 — Phân tâm vì điện thoại | 4 | 4 | 3 | 3 | 4 | 2 | 3 | 23 |
+| 6 | C07 — Tổng hợp dữ liệu kế toán xã | 4 | 4 | 3 | 3 | 2 | 4 | 2 | 22 |
+| 7 | C12 — Ôn pattern và lỗi lập trình | 4 | 4 | 3 | 3 | 3 | 2 | 3 | 22 |
+| 8 | C04 — Tài liệu scan cần chỉnh sửa | 4 | 4 | 2 | 3 | 3 | 3 | 2 | 21 |
+| 9 | C09 — Tìm trend để làm content | 4 | 4 | 3 | 2 | 2 | 3 | 2 | 20 |
+| 10 | C05 — Chuẩn bị giáo án điện tử | 4 | 3 | 2 | 3 | 2 | 3 | 2 | 19 |
+| 11 | C06 — Tìm thông tin đi lại Hà Nội | 3 | 4 | 2 | 3 | 2 | 3 | 2 | 19 |
+| 12 | C03 — Khó ngủ, ngủ gián đoạn | 4 | 4 | 3 | 2 | 1 | 1 | 1 | 16 |
 
-### 2.4. Chấm điểm shortlist (1–5)
-
-| Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-
-**Candidate được chọn:**
+**Candidate được chọn:** C08 — Kiểm tra lead trùng và trạng thái đã thanh toán (paid) trước khi bàn giao cho Sales (đề xuất để nhóm xác nhận). Bối cảnh: nhiều người chạy quảng cáo cho cùng một sản phẩm, mỗi người có một file lead .xlsx riêng rồi tự copy vào một file tổng chung để Sales gọi. Điểm shortlist: **28/35**, cao nhất trong 3 candidate.
 
 **Vì sao chọn:**
 
+- **Actor và quy trình rõ:** người chạy quảng cáo → file tổng → Sales. Quy trình 6 bước vẽ được, bottleneck nằm ở **một bước cụ thể**: dò từng lead với file tổng để tìm trùng chéo với file của người khác (~70 phút/ngày/người), cộng thêm dò danh sách paid (~50 phút).
+- **Pain có số liệu để kiểm chứng:** 2–3 giờ/ngày/người cho việc check + copy; Sales phản ánh gọi sai/gọi nhầm 9–15 lần/tuần. Cả hai đều đo lại được bằng bấm giờ và log cuộc gọi.
+- **Impact nhân lên theo số người:** cùng một việc lặp lại ở từng người chạy quảng cáo; hậu quả dồn về Sales (gọi trùng) và khách hàng (bị gọi nhiều lần, bị gọi dù đã mua).
+- **So sánh rõ được 4 mức No AI / Rule / Workflow / Agent:** gộp về một bảng tính chung (No AI), công thức COUNTIF/XLOOKUP đánh dấu trùng và paid (Rule), tự động đổ lead + người duyệt ngoại lệ (Workflow), còn Agent gần như không cần. Có thể thử Rule trước khi cân nhắc AI.
+- **Vừa sức một buổi lab:** mô phỏng được bằng vài file mẫu đã ẩn danh, không cần quyền truy cập hệ thống thật.
+
 **Vì sao loại các candidate còn lại:**
 
-**Xử lý bất đồng (nếu có):**
+- **C10 — Tìm cách sửa lỗi lab trong chat (26/35):** cần quyền truy cập lịch sử chat và bộ câu hỏi–đáp án để đánh giá; pain chưa có số liệu đo, khó kiểm chứng trong thời gian lab.
+- **C11 — Đối chiếu slide và báo cáo (26/35):** cần cặp slide–báo cáo đúng phiên bản và thống nhất cách đo thời gian đối chiếu nên khó đặt baseline.
+- **C07 — Tổng hợp dữ liệu kế toán xã** (cùng cluster D với C08): chỉ xảy ra 1 lần/tháng với 1 người; dữ liệu lương/BHXH là dữ liệu cá nhân nhạy cảm, khó lấy mẫu để kiểm chứng.
+- **C09 — Tìm trend content:** khó đo thế nào là "ý tưởng tốt"; chưa rõ bottleneck là bước tìm trend hay bước nghĩ ý tưởng.
 
+**Xử lý bất đồng (nếu có):** Chưa có thông tin trong tài liệu nguồn; nhóm bổ sung sau khi thảo luận (ai đề xuất candidate khác, lý do, nhóm chốt bằng tiêu chí nào). Điểm nên đem ra phản biện: C08 chỉ hơn C10/C11 2 điểm, và tiêu chí "Nhóm hiểu domain" của C08 mới đạt 3/5.
 ---
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
