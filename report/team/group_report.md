@@ -91,51 +91,91 @@ xuống ≤30 phút/ngày/người và số cuộc gọi sai/nhầm từ 9–15 
 
 ## 3. Kiểm chứng + research giải pháp đã có (CP4)
 
+Candidate từ CP3: **C08. Kiểm tra lead trùng và trạng thái đã thanh toán (paid) trước khi bàn giao cho Sales.**
+
 ### 3.1. Assumption Map
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Người kiểm lead mất 2–3 giờ/ngày, chủ yếu ở bước dò trùng và dò paid; Sales gọi sai/nhầm 9–15 cuộc/tuần vì dữ liệu chưa kiểm. | Value | 5 | 2 | Có, phỏng vấn qua tin nhắn |
+| 2 | Có một nguồn paid được cập nhật trước lúc bàn giao lead. | Feasibility | 5 | 1 | Có, phỏng vấn qua tin nhắn |
+| 3 | Số điện thoại (đã chuẩn hóa) đủ làm khóa nhận diện khách; ca một người nhiều số hoặc nhiều người chung số là ít. | Feasibility | 5 | 1 | Có, phỏng vấn qua tin nhắn |
+| 4 | Các cách đơn giản (sheet chung, công thức) chưa đủ hoặc chưa được thử, nên vẫn còn bước dò tay. | Value | 4 | 1 | Có, phỏng vấn qua tin nhắn |
+| 5 | Người vận hành chấp nhận một nguồn bàn giao duy nhất và một người duyệt ngoại lệ. | Usability | 4 | 1 | Sau buổi lab, thử với file mẫu đã che |
+| 6 | Được phép dùng dữ liệu mẫu (đã ẩn danh) để thử rule. | Viability | 5 | 1 | Sau buổi lab, xin xác nhận người quản lý dữ liệu |
 
-*Điền 4–6 giả định; xóa dòng thừa.*
-
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: #1, #2, #3, #4. Đây là các giả định quan trọng nhưng ít bằng chứng và hỏi được bằng phỏng vấn về các sự cố đã xảy ra. #5 và #6 cần file mẫu và người có thẩm quyền nên để sau buổi lab.
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
+Cách đã dùng: Phỏng vấn qua tin nhắn (Zalo/Messenger) với 2 người ngoài nhóm, hỏi theo The Mom Test về những lần gần nhất đã xảy ra.
 
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
+Interview snapshot 1:
 
 | Trường | Nội dung |
 |---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+| Người được hỏi (vai trò, không ghi tên thật) | Nhân viên marketing ads, lĩnh vực marketing. Khoảng 10–15 khách/ngày. |
+| Thời điểm và kênh phỏng vấn | Tin nhắn Messenger |
+| Người hỏi trong nhóm | |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Có thử chạy code tại apps script trên file .xlsx nhưng nó ảnh hưởng đến quyền lợi của người khác" |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | "Mỗi ngày chị đều nhập số khách hàng vào bảng số liệu cho sale chăm sóc khách hàng". Lần gọi lỗi gần nhất: "Cách đây 2 hôm." "Khi sale gọi ko đc số đt vì nó sai sót tầm 2 khách". |
+| Hiện đang xử lý bằng cách nào (workaround)? | Kiểm trùng bằng tay: "Kiểm tra file tổng để check dữ liệu xem có trùng hợp hay không". Trạng thái thanh toán xem trên hệ thống: "Nằm trên web của hệ thống do hệ thống tự cập nhật khi nhận đc tiền". Đã thử Apps Script nhưng vướng vì file dùng chung. |
+| Mất bao lâu, bao lần? | Bước lâu nhất là "Bước lọc dữ liệu", "mất 20p để check danh sách của toàn khách hàng" (mỗi ngày). Lần gọi lỗi gần nhất: khoảng 2 khách, cách đây 2 hôm. |
+| Tín hiệu với giả định #1, #2, #3, #4 (xác nhận / phản bác / chưa rõ) | #1 phản bác một phần: lọc mất 20 phút/ngày, thấp hơn nhiều so với 2–3 giờ trong card; lần gọi lỗi gần nhất do số điện thoại sai, không phải do trùng hay đã thanh toán. #2 xác nhận: hệ thống tự cập nhật khi nhận tiền. #3 chưa rõ: chỉ nói kiểm với file tổng, chưa nói cách xử lý ca một người nhiều số hoặc chung số. #4 xác nhận: đã thử Apps Script nhưng không dùng được trên file chung. |
+| Insight / opportunity rút ra | Thời gian không phải pain lớn nhất ở quy mô 10–15 khách/ngày; lỗi khiến Sales gọi hỏng là số điện thoại sai. Tự động hóa bị chặn vì file tổng dùng chung, sửa trên đó ảnh hưởng người khác. "Nếu ngày nào ít khách thì sẽ ít gặp trường hợp trên": pain tăng theo số lead. |
+| Ảnh chụp đoạn chat (đã che tên, SĐT) | [cp4-interview-1.jpg](../assets/cp4-interview-1.jpg) |
+
+Interview snapshot 2:
+
+| Trường | Nội dung |
+|---|---|
+| Người được hỏi (vai trò, không ghi tên thật) | Nhân viên Social Marketing, tự chạy quảng cáo và lọc lead. "1 ngày anh xử lý 20-50 lead khách hàng". |
+| Thời điểm và kênh phỏng vấn | Tin nhắn Messenger |
+| Người hỏi trong nhóm | |
+| Câu nói đáng nhớ nhất (nguyên văn) | "Team có làm nhưng đó là file chung dữ liệu nên ko dùng công thức hay thuật toán cho 1 người đc" |
+| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | Việc lặp lại mỗi ngày: "a sẽ phải lọc khách hàng từ dữ liệu chạy quảng cáo của anh", "Xong rồi anh sẽ check xem số liệu của khách đúng chưa? Khách đã thanh toán chưa ? Liệu khách đó đã có ai chạy quảng cáo có data khách đó chưa?" Không nêu ngày cụ thể của lần gọi nhầm gần nhất. |
+| Hiện đang xử lý bằng cách nào (workaround)? | "Bằng việc check data trong file tổng bằng tay". Trạng thái thanh toán: "Thông tin khách hàng thanh toán do hệ thống cập nhật". |
+| Mất bao lâu, bao lần? | "Bước lọc dữ liệu . Ước tính mất khoảng 10p cho 1 danh sách khách hàng khoảng 10 người" (tự ước lượng). Với 20–50 lead/ngày, nhóm quy đổi ra khoảng 20–50 phút/ngày. Gọi nhầm: "Chuyện này cũng thường xuyên tầm 1-2 hôm sẽ có 1-2 khách đã bị gọi trùng hoặc nhầm". |
+| Tín hiệu với giả định #1, #2, #3, #4 (xác nhận / phản bác / chưa rõ) | #1 xác nhận về gọi trùng/nhầm lặp lại thường xuyên; phản bác một phần về thời gian (khoảng 20–50 phút/ngày, không phải 2–3 giờ). #2 xác nhận: hệ thống cập nhật trạng thái thanh toán; chưa rõ cập nhật trước hay sau lúc bàn giao. #3 chưa rõ: kiểm tay trong file tổng, chưa nói cách xử lý ca một người nhiều số hoặc chung số. #4 xác nhận: không áp được công thức vì file dùng chung. |
+| Insight / opportunity rút ra | Quy trình người này mô tả khớp với C08: kiểm số liệu đúng chưa, đã thanh toán chưa, đã có người khác chạy quảng cáo có data khách chưa. Pain chính là gọi trùng/nhầm lặp lại, không phải thời gian. Ràng buộc giống người 1: file tổng dùng chung nên không áp được công thức hay script riêng. Tín hiệu phản bác: "Có nhưng thi thoảng sẽ kiểm rất nhanh". |
+| Ảnh chụp đoạn chat (đã che tên, SĐT) | [cp4-interview-2.jpg](../assets/cp4-interview-2.jpg) |
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Card nghiệp vụ C08 (card #2, bộ C07–C09) | 1 card | Nhiều file lead riêng; dò trùng khoảng 70 phút và dò paid khoảng 50 phút/ngày; 9–15 cuộc gọi sai/tuần. | Chính card thừa nhận một bảng chung kèm công thức có thể đủ; số liệu tự thuật, chưa có log. |
+| Phỏng vấn qua tin nhắn | 2 | 2/2 kiểm trùng bằng tay với file tổng. 2/2 có gọi lỗi gần đây: khoảng 2 khách cách đây 2 hôm (người 1), 1–2 khách mỗi 1–2 hôm (người 2). 2/2 cho biết trạng thái thanh toán do hệ thống tự cập nhật. 2/2 đã thử hoặc muốn dùng công thức/script nhưng vướng vì file tổng dùng chung. | Thời gian thấp hơn nhiều so với card: 20 phút/ngày (người 1) và khoảng 10 phút cho 10 lead (người 2), so với 2–3 giờ/ngày. Lần gọi lỗi của người 1 do số điện thoại sai, không phải do trùng hay đã thanh toán. Ngày ít khách hoặc "thi thoảng" thì kiểm rất nhanh. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**
 
+Trước phỏng vấn, từ việc đọc card và research (mục 3.3):
+
+1. **Phạm vi:** thu hẹp từ "quản lý lead" xuống còn kiểm tra trùng và paid trước khi bàn giao. Không tự gộp khách mơ hồ, không tích hợp gọi điện hay thanh toán.
+2. **Hướng xử lý:** ưu tiên kiểm trùng ngay lúc nhập thay vì dò lại cuối ngày, theo cách Salesforce cảnh báo trùng lúc nhập.
+3. **Boundary:** chỉ gắn cờ, không tự gộp hay xóa lead, vì ngay cả HubSpot cũng để người duyệt quyết định gộp và không hoàn tác được thao tác gộp.
+
+Các thay đổi sau phỏng vấn qua tin nhắn:
+
+1. **Impact và Success Metric:** baseline thời gian hạ từ 2–3 giờ/ngày (card) xuống khoảng 20–50 phút/ngày theo 2 người được hỏi (tự ước lượng). Target ≤30 phút/ngày không còn đủ ý nghĩa, nên metric chính chuyển sang **số khách bị gọi trùng, gọi nhầm hoặc gọi lỗi mỗi tuần**; thời gian kiểm là metric phụ. Baseline lỗi vẫn phải đo bằng log, vì 2 người chỉ nêu số ước lượng.
+2. **Bottleneck và phạm vi:** thêm bước **kiểm số điện thoại hợp lệ** trước bàn giao, vì lần gọi lỗi gần nhất của người 1 do số sai chứ không do trùng. Bottleneck viết lại thành: kiểm tay từng lead với file tổng dùng chung, dễ lọt khách trùng hoặc số sai sang Sales.
+3. **Giả định #2:** 2/2 người xác nhận trạng thái thanh toán do hệ thống tự cập nhật khi nhận tiền. Rủi ro chuyển từ "không có nguồn paid" sang "phải mở hệ thống và đối chiếu bằng tay"; độ trễ cập nhật so với lúc bàn giao vẫn chưa rõ.
+4. **Ràng buộc mới về file dùng chung:** cả 2 người không áp được công thức hay script vì file tổng dùng chung, sửa trên đó ảnh hưởng người khác. Phương án Rule ở CP5 phải chạy trên **bản sao hoặc một sheet kiểm riêng chỉ đọc file tổng**, không ghi vào file chung. Ràng buộc này bổ sung cho giả định #5 (Usability) và #6 (Viability).
+5. **Giả định #3** vẫn chưa có bằng chứng: cả 2 người chưa mô tả cách xử lý ca một người nhiều số hoặc nhiều người chung số. Giữ boundary "không tự gộp, ca không chắc chuyển người duyệt".
+6. **Mức can thiệp:** pain chính là lỗi bàn giao do kiểm tay trên file chung, quy mô 10–50 lead/ngày. Bằng chứng này nghiêng về No AI/Rule (quy định nhập, kiểm định dạng số, đánh dấu trùng), chưa có lý do dùng AI.
+
+
 ### 3.3. Research giải pháp đã có
+
+Các link được mở kiểm tra ngày 09/11/2026. Nguồn chỉ xác nhận công cụ có khả năng làm gì, không xác nhận hiệu quả trên dữ liệu của nhóm.
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
-| | | | | | |
+| Rule trên bảng tính: REGEXREPLACE (chuẩn hóa SĐT), COUNTIF (đếm trùng theo khóa), XLOOKUP (tra paid) | [REGEXREPLACE](https://support.google.com/docs/answer/3098245?hl=en), [COUNTIF](https://support.google.com/docs/answer/3093480?hl=en), [XLOOKUP](https://support.google.com/docs/answer/12405947?hl=en) | Chuẩn hóa SĐT/tên, dò trùng với file tổng, dò paid | Miễn phí, có sẵn; XLOOKUP có chế độ khớp chính xác và trả giá trị tùy chọn khi không tìm thấy | COUNTIF chỉ có một điều kiện, chỉ bắt trùng chính xác. Không tìm thấy trong danh sách paid không có nghĩa là chưa trả. Không giải quyết việc nhiều người nhập cùng lúc. | Dùng để gắn cờ, không tự xóa. Ca không tìm thấy đưa vào danh sách chờ, không mặc định là chưa paid. |
+| HubSpot, Duplicates manager | [knowledge.hubspot.com](https://knowledge.hubspot.com/records/manage-duplicate-records) | Dò trùng contact | Mỗi ngày tự so các thuộc tính (tên, email, SĐT, công ty...) và đưa ra cặp nghi trùng để người duyệt gộp hoặc từ chối | Cần gói trả phí (Professional/Enterprise). Đã gộp thì không hoàn tác được. Chỉ dùng được khi lead đã nằm trong CRM, không xử lý nhiều file Excel rời. | Công cụ lớn cũng để người duyệt quyết định gộp. Nhóm giữ boundary không tự gộp, không tự xóa. |
+| Salesforce, Matching rules và Duplicate rules | [Trailhead: Resolve and Prevent Duplicate Data](https://trailhead.salesforce.com/content/learn/modules/sales_admin_duplicate_management/sales_admin_duplicate_management_unit_2) | Cảnh báo hoặc chặn trùng ngay lúc nhập lead | Tách "so khớp thế nào" (chính xác hoặc gần đúng) khỏi "làm gì khi trùng" (cảnh báo hoặc chặn); có rule mẫu cho Lead | Chi phí và công cấu hình cao so với quy mô nhóm nhỏ. Người dùng vẫn bỏ qua được cảnh báo nên vẫn cần rà lại. | Kiểm trùng lúc nhập rẻ hơn dò lại cuối ngày. So khớp chính xác trước, so khớp gần đúng chỉ dùng cho ca cần người xem. |
+
+**Kết luận research:** Dò trùng chính xác và tra trạng thái đã có cách làm sẵn trên bảng tính và CRM, nên không cần tự xây và chưa thấy lý do cần AI. Cả HubSpot và Salesforce đều để con người duyệt ca nghi trùng, nên nhóm giữ bước người duyệt như ở CP3. Hướng cho CP5: chuẩn hóa và kiểm trùng ngay lúc nhập bằng Rule, tra paid có ghi thời điểm, người duyệt ngoại lệ, rồi mới bàn giao. Phần công cụ có sẵn chưa giải được là nguồn paid chậm hoặc không thống nhất và ca một người nhiều số; phỏng vấn (mục 3.2) xác nhận trạng thái thanh toán do hệ thống tự cập nhật (#2), còn #3 vẫn chưa rõ.
 
 ---
 
