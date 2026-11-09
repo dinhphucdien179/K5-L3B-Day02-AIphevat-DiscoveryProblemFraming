@@ -195,21 +195,18 @@ AI đóng vai "PM hoài nghi" phản biện Card #1:
 Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5). **Không dùng AI để viết thay.**
 
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
+Mình cảm thấy các bạn trong nhóm có những ý tưởng idea gần gũi với cuộc sống như là cách để rời xa điện thoại/ cách để vào giấc ngủ dễ dàng hơn/ cách để tìm kiến thức tối ưu 
 
-**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
+**6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?** Nhóm đều đặt mình vào các idea gần gũi dễ bất cập nên không bị solution-first.
 
-**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
+**6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.** Tôi không đổi ý khi bị phản biện.
 
-**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
+**6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?** Tôi không bất ngờ vì vấn đề này do tôi nghĩ và tạo ra và phỏng vấn tôi hỏi những người đang gặp vấn đề đó.
 
-**6.5. Điều khó nhất khi viết Problem Statement là gì?**
+**6.5. Điều khó nhất khi viết Problem Statement là gì?** Metric về cuộc gọi nhầm
 
-**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
+**6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?** Tôi sẽ muốn idea của tôi và nhóm sẽ liên quan đến doanh nghiệp nhiều hơn để có thể dễ dàng tích hợp AI
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
 ---
-
-## 7. Tài liệu tham khảo
-
--
