@@ -5,7 +5,7 @@
 ## Thông tin nhóm
 
 - Tên nhóm: AIphevat
-- Candidate problem nhóm chọn (1 câu):
+- Candidate problem nhóm chọn (1 câu): C08. Người chạy quảng cáo phải kiểm tay lead trùng và khách đã thanh toán trên file tổng dùng chung trước khi bàn giao cho Sales, khiến Sales vẫn gọi trùng, gọi nhầm hoặc gọi vào số sai.
 - Quyết định cuối (Go / Not Yet / No-Go):
 
 ## Thành viên
@@ -63,3 +63,28 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 - Cần phân biệt pain với giải pháp: “khó kiểm tra lead trùng” là vấn đề, còn bảng tính chung hoặc AI lọc lead là phương án giải quyết.
 - Khi so sánh candidate, cần nhìn vào actor, bước nghẽn, số liệu và khả năng kiểm chứng; điểm cao chưa đủ để chốt nếu thiếu bằng chứng.
 - Số liệu trong Problem Card là đầu vào để kiểm chứng, chưa thay thế phỏng vấn hoặc đo thực tế. Nên xem xét cách sửa quy trình và Rule trước khi chọn mức can thiệp cao hơn.
+
+### NguyenNghiemKhanhTiep-2A202603863
+
+**Phần việc phụ trách:**
+
+- Người chính phần CP4: Kiểm chứng và Research.
+- Hỗ trợ CP5 (Problem Statement v0) và CP6 (mức can thiệp, Problem Statement v1).
+
+**Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
+
+- Lập Assumption Map cho candidate C08 gồm 6 giả định (Value, Feasibility, Usability, Viability), chọn 4 giả định quan trọng nhưng ít bằng chứng (#1–#4) để kiểm chứng trong buổi lab.
+- Soạn bộ 8 câu hỏi phỏng vấn theo The Mom Test (hỏi về lần gần nhất đã xảy ra, không hỏi "có muốn dùng không").
+- Phỏng vấn qua tin nhắn Messenger 2 người ngoài nhóm đang làm marketing và tự lọc lead: một người marketing ads (10–15 khách/ngày), một người Social Marketing (20–50 lead/ngày). Ghi lại thành 2 Interview Snapshot.
+- Tổng hợp tín hiệu xác nhận và phản bác. Phát hiện chính: thời gian kiểm thực tế chỉ khoảng 20–50 phút/ngày, thấp hơn nhiều so với 2–3 giờ trong card; pain chính là khách bị gọi trùng, gọi nhầm hoặc gọi lỗi; file tổng dùng chung nên không áp được công thức hay script.
+- Đề xuất 6 điểm sửa problem sau phỏng vấn: đổi metric chính sang số khách bị gọi trùng, gọi nhầm hoặc gọi lỗi mỗi tuần; thêm bước kiểm số điện thoại hợp lệ; Rule phải chạy trên bản sao hoặc sheet kiểm riêng, không ghi vào file chung.
+- Research 3 nhóm giải pháp có sẵn (hàm Google Sheets REGEXREPLACE/COUNTIF/XLOOKUP, HubSpot Duplicates manager, Salesforce Matching/Duplicate rules), tự mở và kiểm tra từng link. Kết luận: dò trùng chính xác đã có cách làm sẵn, chưa có lý do dùng AI.
+
+**Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
+
+- `report/team/group_report.md` mục 3 (CP4): 3.1 Assumption Map, 3.2 Kiểm chứng (2 Interview Snapshot, bảng tổng hợp, các thay đổi sau phỏng vấn), 3.3 Research giải pháp đã có.
+- `report/assets/cp4-interview-1.jpg`, `report/assets/cp4-interview-2.jpg`: ảnh chụp 2 đoạn phỏng vấn qua tin nhắn.
+
+**Điều mình học được từ phần nhóm:**
+
+-Nhóm làm việc nghiêm túc, tinh thần trao đổi nhóm sôi nổi nên mình cũng học được rất nhiều những ý tưởng từ các bạn.
