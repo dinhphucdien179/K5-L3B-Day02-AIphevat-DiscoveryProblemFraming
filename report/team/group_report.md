@@ -251,7 +251,6 @@ Phản biện từ AI (Claude), prompt: "chỉ ra lỗ hổng của Problem Stat
 |   4 | Quy mô nhỏ (10–50 lead/ngày, 20–50 phút/ngày): có thể chỉ cần No AI (một quy định nhập số chuẩn + tìm kiếm trong file tổng) là đủ, chưa chắc cần Rule                         | Đồng ý một phần       | Chưa đổi v0; đưa vào so sánh No AI và Rule ở CP6. Giữ Rule vì cả 2 người phỏng vấn vẫn để lọt lỗi dù đang kiểm tay    |
 |   5 | Sheet kiểm đọc bản file tổng có thể bị trễ, lead người khác vừa thêm sẽ không bị gắn cờ trùng                                                                                 | Đồng ý                | Đã ghi ở mục 4.3 (rủi ro mới): làm mới sheet kiểm ngay trước khi dán lead vào file tổng                               |
 
----
 
 ---
 

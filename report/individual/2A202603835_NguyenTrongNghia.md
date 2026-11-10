@@ -156,7 +156,7 @@ HIỆN TẠI — Tổng thời gian mỗi bài: khoảng 30' giải + 0' ghi ch�
 | Quy trình nhóm | Người chính CP5: dựng quy trình hiện tại 6 bước theo lời kể của 2 người được phỏng vấn, vẽ quy trình tương lai ở mức Rule, lập bảng before/after | Mục 4 báo cáo nhóm và ảnh `report/assets/cp5-workflow-future.png`. Quy trình tương lai chạy trên sheet kiểm riêng chỉ đọc file tổng, có bước kiểm số hợp lệ, bước người duyệt và phương án quay về |
 | Problem Statement | Viết Problem Statement v0 (6 trường); nhờ AI phản biện và ghi lại 5 điểm kèm hướng xử lý | Mục 5 báo cáo nhóm. Metric chính đổi sang số khách bị gọi trùng / nhầm / lỗi mỗi tuần, thời gian kiểm thành metric phụ |
 | Mức can thiệp AI | Đánh giá bài toán vào ma trận độ mơ hồ thấp × độ phức tạp thấp; lập luận rằng bước kiểm trùng và tra cứu trạng thái thanh toán chỉ cần Rule (công thức bảng tính), không cần và không nên dùng AI | Nhóm chốt chọn mức Rule, tránh sa đà vào việc xây dựng AI hay Agent phức tạp không cần thiết |
-| Quyết định | Cùng nhóm đánh giá 4 rủi ro sản phẩm; đề xuất quyết định Go (pilot nhỏ với Rule) trên 1 nhân viên chạy ads trong 1 tuần và Not Yet với AI. Đề xuất ngưỡng dừng rõ ràng cho pilot | Mục 8 báo cáo nhóm có quyết định thực tế, an toàn và ngưỡng dừng đo lường được |
+| Quyết định | Cùng nhóm đánh giá 4 rủi ro sản phẩm (Nhân làm chính CP6); thống nhất quyết định **Not Yet** với triển khai trên dữ liệu thật, ưu tiên kiểm chứng Rule trong 5 ngày làm việc | Mục 8 báo cáo nhóm có quyết định thực tế, an toàn và ngưỡng dừng đo lường được |
 
 ---
 
@@ -205,10 +205,10 @@ Tôi sẽ thúc đẩy nhóm đi phỏng vấn người thật sớm hơn để 
 
 1. **Problem:** Người chạy quảng cáo phải tự kiểm tay lead trùng và khách đã thanh toán trên file dùng chung trước khi bàn giao cho Sales, dẫn đến việc Sales vẫn gọi trùng, gọi nhầm khách đã mua hoặc gọi vào số sai (1–2 khách mỗi 1–2 ngày).
 2. **Quy trình:** Nhóm thiết lập quy trình mới gồm 8 bước, đưa việc chuẩn hóa số điện thoại, kiểm tra số hợp lệ, kiểm trùng và tra cứu trạng thái thanh toán sang một sheet kiểm riêng chỉ đọc dữ liệu từ file tổng chung.
-3. **Metric:** Thành công được đo bằng việc giảm số khách bị gọi lỗi từ 1–2 khách/ngày xuống dưới 1 khách/tuần (đo bằng log phản hồi của Sales) và giảm thời gian kiểm tra dữ liệu xuống dưới 20 phút/ngày (đo bằng bấm giờ).
+3. **Metric:** Thành công được đo bằng việc giảm số khách bị gọi lỗi từ khoảng 1–2 khách mỗi 1–2 ngày xuống dưới 1 khách/tuần (đo bằng log phản hồi của Sales) và giảm thời gian kiểm tra dữ liệu xuống dưới 20 phút/ngày (đo bằng bấm giờ).
 4. **Boundary:** Hệ thống chỉ được đọc dữ liệu file tổng chứ tuyệt đối không được ghi, sửa hay xóa trên file chung; không tự ý xóa lead; mọi lead có nghi vấn hoặc không tra được thanh toán phải gắn cờ "CHƯA RÕ" để con người duyệt trước khi bàn giao.
 5. **Mức can thiệp AI:** Nhóm chọn mức **Rule** (dùng các hàm chuẩn hóa REGEXREPLACE, kiểm trùng COUNTIF và tra cứu XLOOKUP) vì bài toán thuần túy là đối chiếu logic xác định, hoàn toàn không cần AI dự đoán hay sinh nội dung.
-6. **Quyết định:** Nhóm quyết định **Go cho pilot nhỏ dùng Rule** (thử nghiệm trên 1 nhân sự chạy quảng cáo trong 1 tuần) và **Not Yet đối với việc ứng dụng AI**, kèm ngưỡng dừng nếu sau 1 tuần tỉ lệ gọi lỗi không giảm thì quay về quy trình cũ để đánh giá lại nguyên nhân.
+6. **Quyết định:** Nhóm quyết định **Not Yet** với triển khai trên dữ liệu thật: chọn Rule về thiết kế là chưa đủ để Go, vì quyền dùng dữ liệu, độ mới của nguồn thanh toán và người ghi log chưa được xác nhận. Trong 5 ngày làm việc, nhóm kiểm chứng các điều kiện này; nếu đủ thì mới Go cho pilot Rule phạm vi nhỏ (5 ngày đo baseline kiểm tay, rồi 5 ngày thử Rule), còn nếu sau 5 ngày vẫn thiếu điều kiện thì quay về kiểm tay kèm checklist (No AI).
 
 ---
 
