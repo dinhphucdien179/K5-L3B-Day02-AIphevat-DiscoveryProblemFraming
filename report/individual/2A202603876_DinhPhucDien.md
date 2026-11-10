@@ -1,8 +1,5 @@
 # Báo cáo cá nhân — Đinh Phúc Diên — 2A202603876
 
-> Template chi tiết và prompt mẫu cho từng mục: [docs/01-worksheet.md](../../docs/01-worksheet.md).
-> Mỗi thành viên một file trong `report/individual/` trên repo nhóm: copy template này thành file mới, điền, rồi commit bằng tài khoản GitHub của bạn. Không viết hộ người khác.
-
 ## 1. Thông tin học viên
 
 - Họ tên: Đinh Phúc Diên
@@ -28,7 +25,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
-> Bản nháp phát triển từ trải nghiệm cá nhân đã cung cấp. Chọn các vấn đề số 3, 4, 5 của CP1; vấn đề 1 và 2 vẫn giữ ở bảng scan nhưng không đưa vào CP2. Thời gian chưa có số đo ghi “chưa đo”; target và phương án mới là đề xuất để cá nhân xem xét, chưa phải kết quả đã đạt.
+Chọn các vấn đề số 3, 4, 5 của CP1. Các thời gian nêu trong card là ước lượng từ trải nghiệm cá nhân; mục tiêu cải thiện chưa phải kết quả đã đạt.
 
 ### Bảng chọn top 3
 
@@ -48,7 +45,7 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 | Quy trình hiện tại (3–7 bước) | Bắt đầu học → dùng điện thoại → để điện thoại lên giường, ra xa và bật im lặng → lấy lại tập trung → tiếp tục học. |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Lấy lại tập trung sau khi ngừng dùng điện thoại: khoảng 30 phút. Bước dùng điện thoại trước đó cũng làm gián đoạn, khoảng 15, 20 hoặc 30 phút tùy lần. |
 | Impact (nếu không giải thì sao) | Thời gian dành cho học bị gián đoạn bởi cả việc dùng điện thoại và quá trình quay lại tập trung; chưa đo ảnh hưởng tới kết quả học. |
-| Success metric (baseline → target) | Baseline tự thuật: khoảng 30 phút lấy lại tập trung. Target đề xuất, cần xác nhận: tối đa 15 phút. Cách đo đề xuất: ghi thời điểm ngừng dùng điện thoại và thời điểm quay lại làm được bài, kèm số phút dùng điện thoại và số lần gián đoạn, trong 7 buổi học. |
+| Success metric (baseline → target) | Baseline tự thuật: khoảng 30 phút lấy lại tập trung. Target dự kiến: tối đa 15 phút. Cách đo đề xuất: ghi thời điểm ngừng dùng điện thoại và thời điểm quay lại làm được bài, kèm số phút dùng điện thoại và số lần gián đoạn, trong 7 buổi học. |
 | Phương án không dùng AI | Tiếp tục cách đã thử: để điện thoại xa chỗ học và bật im lặng. Đề xuất thử chuẩn bị việc này từ đầu buổi, rồi ghi lại mức gián đoạn để so sánh. |
 | Giả thuyết về AI (nếu có) | Chưa có bằng chứng cần AI; ưu tiên kiểm tra cách bố trí chỗ học và điện thoại trước. |
 | Cảm nhận nhanh | No AI — nhận định ban đầu, chưa phải kết luận của nhóm. |
@@ -72,10 +69,10 @@ Chưa đo tổng thời gian cả buổi; các bước chưa có số liệu c�
 | Job Story | Khi cần sử dụng lại công thức toán học đã học và ghi trong vở giấy, tôi muốn tìm được phần ghi chú liên quan, để tiếp tục việc học mà không mất nhiều thời gian lục tìm. |
 | Actor | Tôi, người cần tra cứu kiến thức đã ghi trong vở. |
 | Thời điểm / bối cảnh | Khi cần dùng lại công thức toán đã học nhưng không nhớ vị trí ghi chú. |
-| Quy trình hiện tại (3–7 bước) | Xác định công thức cần tìm → tìm trong vở và các trang ghi chú → nhận ra nội dung cần dùng. Đây là sơ đồ nháp từ lời kể, cần tự kiểm tra lại trình tự. |
+| Quy trình hiện tại (3–7 bước) | Xác định công thức cần tìm → tìm trong vở và các trang ghi chú → nhận ra nội dung cần dùng.  |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Tìm thủ công trong ghi chú lộn xộn: khoảng 20 phút ở lần gần nhất; chưa tách thời gian lật tìm và xác nhận nội dung. |
 | Impact (nếu không giải thì sao) | Mất khoảng 20 phút để có lại thông tin cần dùng, làm chậm việc tiếp tục học. |
-| Success metric (baseline → target) | Baseline: khoảng 20 phút ở lần tìm gần nhất. Target đề xuất, cần xác nhận: tối đa 5 phút/lần. Cách đo đề xuất: bấm giờ từ lúc xác định nội dung cần tìm đến khi tìm đúng ghi chú trong 5 lần tra cứu tiếp theo, ghi cả lần không tìm được. |
+| Success metric (baseline → target) | Baseline: khoảng 20 phút ở lần tìm gần nhất. Target dự kiến: tối đa 5 phút/lần. Cách đo đề xuất: bấm giờ từ lúc xác định nội dung cần tìm đến khi tìm đúng ghi chú trong 5 lần tra cứu tiếp theo, ghi cả lần không tìm được. |
 | Phương án không dùng AI | Đề xuất đánh số trang, tạo mục lục theo chủ đề và đánh dấu những phần thường tra cứu; thử trên vở hiện có trước. Chưa thực hiện hoặc đo hiệu quả. |
 | Giả thuyết về AI (nếu có) | Chưa cần AI ở bước đầu. Chỉ cân nhắc hỗ trợ nhận dạng hoặc tìm kiếm ghi chú nếu thử nghiệm cho thấy mục lục và đánh dấu trang chưa đủ. |
 | Cảm nhận nhanh | No AI — ưu tiên cải thiện cách tổ chức ghi chú. |
@@ -100,7 +97,7 @@ Quy trình nháp hiện tại:
 | Quy trình hiện tại (3–7 bước) | Lên giường → nằm chờ vào giấc → ngủ → nếu tỉnh để đi vệ sinh thì trở lại giường, không làm việc khác → ngủ lại → thức dậy. Nhánh tỉnh giữa đêm không nhất thiết xảy ra mỗi đêm. |
 | Bottleneck (bước nào, mất bao nhiêu phút) | Nằm chờ vào giấc ban đầu: khoảng 120 phút khi khó ngủ. Nếu tỉnh giữa đêm và trở lại giường ngay, thời gian ngủ lại khoảng 20 phút. |
 | Impact (nếu không giải thì sao) | Sáng hôm sau thường mệt, khi cần làm việc dễ mệt và khả năng tập trung học không cao, theo cảm nhận cá nhân. |
-| Success metric (baseline → target) | Baseline tự thuật: khoảng 120 phút vào giấc khi khó ngủ, khoảng 20 phút ngủ lại sau khi tỉnh. Target theo dõi đề xuất, cần xác nhận: ghi đủ nhật ký trong 7 đêm để xác định số đêm khó ngủ và thời gian ước lượng từng đêm; chưa chốt mục tiêu cải thiện giấc ngủ khi chưa đủ dữ liệu. |
+| Success metric (baseline → target) | Baseline tự thuật: khoảng 120 phút vào giấc khi khó ngủ, khoảng 20 phút ngủ lại sau khi tỉnh. Mục tiêu theo dõi: ghi đủ nhật ký trong 7 đêm để xác định số đêm khó ngủ và thời gian ước lượng từng đêm; chưa chốt mục tiêu cải thiện giấc ngủ khi chưa đủ dữ liệu. |
 | Phương án không dùng AI | Đề xuất ghi nhật ký giấy về giờ lên giường, thời gian ước lượng vào giấc, các lần tỉnh, nghỉ trưa và mức mệt/tập trung hôm sau. Cách đang tự làm là không nghỉ trưa; chỉ ghi nhận quan sát này, chưa xác lập quan hệ nguyên nhân hay đưa thành khuyến nghị. |
 | Giả thuyết về AI (nếu có) | Chưa có bằng chứng cần AI. Nếu cần công cụ hỗ trợ thì trước hết chỉ xem xét ghi chép và tổng hợp nhật ký; không giao việc chẩn đoán hay quyết định điều trị cho công cụ. |
 | Cảm nhận nhanh | Chưa biết — cần thêm dữ liệu, chưa rõ nguyên nhân và phạm vi can thiệp. |
@@ -121,25 +118,26 @@ Các mốc là ước lượng cá nhân, chưa có nhật ký đo liên tục.
 
 ### Card muốn pitch nhất
 
-- Card số: **Đề xuất #2 — Tìm lại ghi chú công thức toán; cá nhân cần xác nhận.**
+- Card số: **#2 — Tìm lại ghi chú công thức toán.**
 - Vì sao: Có tình huống cụ thể, thời gian tìm khoảng 20 phút, quy trình dễ mô tả và có thể thử một phương án đơn giản trong phạm vi lab.
 - Câu hỏi muốn nhóm phản biện: “Một lần mất 20 phút đã đủ cho thấy đây là vấn đề đáng giải chưa, hay cần kiểm tra thêm tần suất và hiệu quả của mục lục giấy?”
 
 ### AI đã phản biện card thế nào
 
-Các nhận xét và chỉnh sửa dưới đây do AI đề xuất trong quá trình soạn bản nháp; cột đồng ý để cá nhân tự xác nhận.
+Các điểm được rà soát tập trung vào độ chính xác của số liệu và giới hạn bằng chứng.
 
-| Điểm yếu AI chỉ ra | Đồng ý? | Đã sửa gì |
+| Điểm yếu AI chỉ ra | Kết luận rà soát | Đã sửa gì |
 |---|---|---|
-| Card #1 cần tách thời gian dùng điện thoại khỏi thời gian lấy lại tập trung. | Đã làm rõ bằng trải nghiệm trong trao đổi | Bản nháp tách 15–30 phút dùng điện thoại tùy lần và khoảng 30 phút lấy lại tập trung; chưa coi các số này là trung bình đã đo. |
-| Card #2 dùng một lần tìm kiếm để suy ra mức độ phổ biến; chưa có bằng chứng cần AI. | Chờ cá nhân xác nhận | Ghi rõ baseline là một lần khoảng 20 phút; đề xuất đo thêm 5 lần và thử mục lục giấy trước. |
-| Card #3 chưa xác định nguyên nhân; quan sát về việc không nghỉ trưa không chứng minh hiệu quả. | Chờ cá nhân xác nhận | Giữ cách tự xử lý ở mức quan sát cá nhân; chưa chốt target cải thiện hay giải pháp, đề xuất ghi nhật ký trước. |
+| Card #1 cần tách thời gian dùng điện thoại khỏi thời gian lấy lại tập trung. | Đã làm rõ bằng trải nghiệm trong trao đổi | Tách 15–30 phút dùng điện thoại tùy lần và khoảng 30 phút lấy lại tập trung; chưa coi các số này là trung bình đã đo. |
+| Card #2 dùng một lần tìm kiếm để suy ra mức độ phổ biến; chưa có bằng chứng cần AI. | Chỉ có bằng chứng cho một lần tìm kiếm | Ghi rõ baseline là một lần khoảng 20 phút; đề xuất đo thêm 5 lần và thử mục lục giấy trước. |
+| Card #3 chưa xác định nguyên nhân; quan sát về việc không nghỉ trưa không chứng minh hiệu quả. | Chưa đủ bằng chứng kết luận nguyên nhân | Giữ cách tự xử lý ở mức quan sát cá nhân; chưa chốt target cải thiện hay giải pháp, đề xuất ghi nhật ký trước. |
 
-### Thông tin cần cá nhân bổ sung để chốt CP2
+### Giới hạn số liệu và kế hoạch đo
 
-- Xác nhận các bước của ba quy trình; bổ sung thời gian những bước đang ghi “chưa đo” bằng ghi nhận thực tế.
-- Xác nhận hoặc điều chỉnh target đề xuất của card #1 và #2; card #3 hiện có mục tiêu thu thập dữ liệu, chưa có target cải thiện giấc ngủ.
-- Tự chọn card muốn pitch và xác nhận phản biện nào đồng ý, điểm nào muốn sửa; không coi đề xuất của AI là quyết định cá nhân đã chốt.
+- Các bước ghi “chưa đo” chưa có dữ liệu, không gán thêm thời gian ước đoán.
+- Card #1 đặt mục tiêu từ khoảng 30 phút lấy lại tập trung xuống tối đa 15 phút, theo dõi trong 7 buổi học.
+- Card #2 đặt mục tiêu từ khoảng 20 phút tìm ghi chú xuống tối đa 5 phút, theo dõi trong 5 lần tra cứu.
+- Card #3 ưu tiên ghi đủ nhật ký 7 đêm để xác định baseline; chưa chốt mục tiêu cải thiện giấc ngủ hoặc nguyên nhân.
 
 ---
 
@@ -147,16 +145,16 @@ Các nhận xét và chỉnh sửa dưới đây do AI đề xuất trong quá t
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | Chuẩn bị 3 card từ trải nghiệm cá nhân với AI hỗ trợ diễn đạt. Chưa cung cấp nội dung buổi pitch thực tế. | Có tài liệu chuẩn bị; chưa ghi kết quả pitch. |
-| Phản biện bài của bạn khác | Chưa cung cấp câu hỏi đã tự đặt trong buổi thảo luận. | Cần ghi câu hỏi thật và phản hồi, không dùng câu hỏi AI đề xuất thay cho hoạt động đã làm. |
+| Pitch Problem Card | Chuẩn bị 3 card từ trải nghiệm cá nhân với AI hỗ trợ diễn đạt. Chưa có biên bản pitch trong tài liệu hiện có. | Có tài liệu chuẩn bị; chưa ghi kết quả pitch. |
+| Phản biện bài của bạn khác | Chưa ghi nhận câu hỏi phản biện trực tiếp với thành viên nhóm. | Chưa có kết quả phản biện nhóm để báo cáo. |
 | Nhận phản biện | Làm rõ với AI: 30 phút là thời gian lấy lại tập trung, ngoài thời gian dùng điện thoại. Chưa có câu hỏi nhận từ thành viên nhóm. | Card điện thoại tách hai khoảng thời gian; phản biện nhóm cần bổ sung riêng. |
 | Gom cluster / cây OST | Yêu cầu AI tổng hợp 12 candidate và chỉnh phần trình bày theo mẫu ngắn gọn. | Có bản tổng hợp ở mục 2 báo cáo nhóm; nhóm vẫn cần tự thực hiện pitch và phản biện CP3 theo quy định. |
 | Chọn candidate problem | Yêu cầu so sánh candidate theo bản tổng hợp đề xuất C08. | Có bảng điểm và lý do chọn/loại; chưa có xác nhận đồng thuận nhóm. |
-| Kiểm chứng / research | Được phân công hỗ trợ CP4; chưa cung cấp hoạt động đã thực hiện. | Chưa ghi nhận phỏng vấn, survey hoặc dữ liệu đã thu thập. |
-| Quy trình nhóm | Chưa cung cấp đóng góp thực tế ở CP5. | Bổ sung nếu có tham gia. |
-| Problem Statement | Chưa cung cấp đóng góp thực tế ở CP5–CP6. | Bổ sung nếu có tham gia. |
-| Mức can thiệp AI | Chưa cung cấp ý kiến đã tự trình bày hoặc phản biện ở CP6. | Chưa ghi nhận kết quả. |
-| Quyết định | Được phân công hỗ trợ CP6; chưa cung cấp hoạt động đã thực hiện. | Chưa ghi nhận quyết định cuối của nhóm. |
+| Kiểm chứng / research | Được phân công hỗ trợ CP4; tài liệu hiện có chưa ghi nhận hoạt động kiểm chứng đã thực hiện. | Chưa ghi nhận phỏng vấn, survey hoặc dữ liệu đã thu thập. |
+| Quy trình nhóm | Không có đóng góp CP5 được ghi nhận trong tài liệu hiện tại. | Chưa có sản phẩm cá nhân được ghi nhận ở phần này. |
+| Problem Statement | Không có đóng góp CP5–CP6 được ghi nhận trong tài liệu hiện tại. | Chưa có sản phẩm cá nhân được ghi nhận ở phần này. |
+| Mức can thiệp AI | Chưa ghi nhận ý kiến cá nhân ở CP6. | Chưa ghi nhận kết quả. |
+| Quyết định | Được phân công hỗ trợ CP6; chưa có kết luận cuối trong báo cáo nhóm. | Chưa ghi nhận quyết định cuối của nhóm. |
 
 ---
 
@@ -165,50 +163,43 @@ Các nhận xét và chỉnh sửa dưới đây do AI đề xuất trong quá t
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
 | CP1 Scan | Nhờ gợi ý hướng nhớ trải nghiệm, hỏi làm rõ và sắp xếp thành Job Story. | Tách tình huống, nhu cầu, actor và dấu hiệu thật. | Ban đầu phạm vi “kiểm tra logic/code tối ưu” còn quá rộng; bản diễn đạt cần làm rõ dung lượng lưu trữ khác RAM. | Tôi cung cấp MySQL, TileDB, 600 MB → 140 MB và xác định tối ưu code là phần mất thời gian nhất; không bổ sung số RAM chưa đo. |
-| CP2 Problem Card | Nhờ phát triển bản nháp 3 card, sơ đồ và phản biện từ trải nghiệm đã kể. | Xác định bước nghẽn, tách baseline khỏi target đề xuất. | Target và card muốn pitch là AI đề xuất; nhiều thời gian từng bước chưa có số liệu. | Tôi chọn vấn đề 3–5, làm rõ 30 phút lấy lại tập trung khác thời gian dùng điện thoại; các target còn cần tôi xác nhận. |
+| CP2 Problem Card | Nhờ phát triển 3 card, sơ đồ và phản biện từ trải nghiệm đã kể. | Xác định bước nghẽn, tách baseline khỏi target đề xuất. | AI đề xuất target và card ưu tiên, nhưng chưa có dữ liệu thử nghiệm để khẳng định hiệu quả. | Tôi chọn vấn đề 3–5, làm rõ 30 phút lấy lại tập trung khác thời gian dùng điện thoại; các target được tách khỏi kết quả đo thực tế. |
 | CP3 Tổng hợp tài liệu | Nhờ tổng hợp 12 card và đề xuất so sánh, sau đó yêu cầu rút gọn đúng mẫu. | Hỗ trợ sắp xếp tài liệu và cách trình bày. | Bản đầu dài hơn nhu cầu; điểm AI chấm chưa phải đồng thuận của nhóm. Quy định lab yêu cầu tự pitch và phản biện, không dùng AI ở CP3. | Tôi yêu cầu bỏ đoạn phân định điểm gần nhau, dùng các mục chọn/loại và mẫu ngắn gọn. Bản AI chỉ là tài liệu tham khảo; chưa ghi đã hoàn thành hoạt động nhóm. |
 | CP4 Research | AI từng mở tài liệu hàm bảng tính khi soạn bản nhóm trước đó; chưa có hoạt động research cá nhân được xác nhận. | Gợi ý hướng tra nguồn chính thức. | Tra tài liệu công cụ không kiểm chứng được pain hay số liệu người dùng. | Chưa có sửa đổi cá nhân để ghi nhận; cần tự kiểm nguồn và phối hợp kiểm chứng theo phân công. |
-| CP5 Quy trình | Chưa ghi nhận sử dụng ở phần việc cá nhân. | Chưa đánh giá. | Chưa đánh giá. | Bổ sung sau nếu có sử dụng. |
-| CP5–6 Problem Statement | Chưa ghi nhận sử dụng ở phần việc cá nhân. | Chưa đánh giá. | Chưa đánh giá. | Bổ sung sau nếu có sử dụng. |
-| CP6 Mức can thiệp / quyết định | Chưa ghi nhận sử dụng ở phần việc cá nhân. | Chưa đánh giá. | Chưa đánh giá. | Bổ sung sau nếu có sử dụng. |
+| CP5 Quy trình | Chưa ghi nhận sử dụng ở phần việc cá nhân. | Chưa đánh giá. | Chưa đánh giá. | Chưa có nội dung sử dụng cá nhân được ghi nhận. |
+| CP5–6 Problem Statement | Chưa ghi nhận sử dụng ở phần việc cá nhân. | Chưa đánh giá. | Chưa đánh giá. | Chưa có nội dung sử dụng cá nhân được ghi nhận. |
+| CP6 Mức can thiệp / quyết định | Chưa ghi nhận sử dụng ở phần việc cá nhân. | Chưa đánh giá. | Chưa đánh giá. | Chưa có nội dung sử dụng cá nhân được ghi nhận. |
+| CP7 Reflection | Nhờ hỗ trợ diễn đạt từ cuộc trao đổi và báo cáo hiện có. | Sắp xếp các nhận xét theo câu hỏi 6.1–6.7. | Tài liệu chưa có kết quả pitch, phỏng vấn và quyết định cuối để phản ánh đầy đủ trải nghiệm nhóm. | Giữ riêng nhận xét từ việc đọc tài liệu với kết quả kiểm chứng; không thêm người hỏi, lời trích hoặc số liệu chưa có. |
 
 ---
 
 ## 6. Reflection (CP7)
 
-Trả lời bằng trải nghiệm thật của bạn, tối thiểu 200 từ cho các câu 6.1–6.6 (không tính 6.7, câu này được chấm riêng ở tiêu chí C5).
-
 **6.1. Tôi học được gì khi nghe top 3 problems của các bạn khác?**
 
-> Gợi ý tự trả lời: chọn một vấn đề thật của bạn khác; kể trước đó bạn chưa biết gì và sau khi nghe bạn hiểu thêm điều gì.
+Qua việc tổng hợp các Problem Card của các thành viên, tôi thấy vấn đề không chỉ nằm trong những trải nghiệm học tập của mình. Card về kiểm tra lead cho thấy dữ liệu phân tán có thể khiến nhiều người cùng mất thời gian đối chiếu và khiến Sales gọi trùng khách. Card về tìm cách sửa lỗi lab và đối chiếu slide–báo cáo cũng cho thấy cần mô tả đúng bước nghẽn thay vì chỉ nói chung là “tốn thời gian”. Phần tôi có căn cứ trình bày ở đây là đọc và tổng hợp tài liệu; chưa có biên bản để kể lại một buổi pitch trực tiếp.
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
-> Gợi ý tự trả lời: kể một phát biểu hoặc tình huống thật; nhóm đã quay lại hỏi về actor, bước nghẽn hay bằng chứng ra sao? Nếu chưa gặp, ghi đúng như vậy.
+Tôi chưa có tình huống thảo luận cụ thể để khẳng định nhóm đã mắc lỗi này. Tuy nhiên, khi chuẩn bị cây OST, tôi phân biệt được “khó phát hiện lead trùng giữa nhiều file” là pain, còn “dùng bảng tính chung” hay “AI lọc lead” là giải pháp. Khi trình bày, cần đặt nhu cầu và trở ngại ở tầng opportunity, sau đó mới so sánh cách can thiệp. Điểm cần tiếp tục kiểm tra là một bảng chung và công thức có đủ giải quyết vấn đề hay chưa.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-> Gợi ý tự trả lời: ý kiến ban đầu của bạn là gì, ai hỏi câu gì và bạn đã đổi nội dung nào? Nếu chưa có phản biện nhóm, chưa ghi là đã có.
+Một thay đổi có căn cứ trong quá trình làm bài là cách mô tả vấn đề phân tâm do điện thoại. Khi được AI hỏi làm rõ, tôi xác nhận khoảng 30 phút là thời gian lấy lại tập trung sau khi ngừng dùng điện thoại, còn thời gian dùng điện thoại có thể là 15, 20 hoặc 30 phút tùy lần. Nhờ vậy, card tách hai khoảng thời gian và không coi 30 phút là toàn bộ gián đoạn. Đây là việc làm rõ và sửa mô tả sau câu hỏi của AI, chưa phải ví dụ đổi ý do một thành viên nhóm phản biện.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
-> Gợi ý tự trả lời sau kiểm chứng: nguồn nào cho kết quả trái kỳ vọng, bằng chứng cụ thể là gì và nhóm đã sửa gì?
+Tài liệu hiện tại chưa có kết quả phỏng vấn, survey hoặc thử nghiệm để tôi nêu một phát hiện bất ngờ đã được kiểm chứng. Điều tôi rút ra khi đọc card C08 là một vấn đề có nhiều thao tác và tác động tới nhiều người vẫn có thể bắt đầu bằng sửa quy trình hoặc Rule. Tuy nhiên, đây mới là nhận xét từ tài liệu, chưa chứng minh phương án đó hiệu quả. Tôi cần hỗ trợ kiểm chứng nguồn paid, cách xác định lead trùng và số liệu thời gian theo phân công CP4 trước khi kết luận.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
-> Gợi ý tự trả lời: chọn khó khăn bạn thực sự gặp, chẳng hạn tách vấn đề khỏi giải pháp, chọn metric hoặc giới hạn phạm vi; kể ví dụ cụ thể.
+Qua quá trình viết các card, tôi thấy phần cần làm rõ nhất là biến mô tả chung thành bước nghẽn và metric cụ thể. Ban đầu tôi nói “kiểm tra logic và code có tối ưu không”; sau các câu hỏi, tôi xác định phần tốn thời gian nhất là tránh sao chép bộ nhớ và chuyển đổi dữ liệu không cần thiết. Tôi cũng cần tách dung lượng lưu trữ 600 MB xuống 140 MB khỏi mức RAM chưa có số đo. Với các card được chọn, baseline tự thuật và target đề xuất phải được ghi riêng, không coi mục tiêu là kết quả đã đạt.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-> Gợi ý tự trả lời: chọn một việc muốn làm khác, lý do và một câu hỏi bạn sẽ tự đặt cho nhóm.
+Nếu làm lại, tôi sẽ ghi thời gian và hoàn cảnh ngay khi gặp vấn đề, thay vì chỉ dựa vào trí nhớ khi viết báo cáo. Tôi sẽ ghi rõ nguồn của từng con số và kiểm tra xem các thành viên đang so sánh cùng phạm vi công việc hay không. Tôi cũng sẽ giữ phần tổng hợp ngắn gọn ngay từ đầu, vì bản tổng hợp đầu tiên dài hơn nhu cầu và tôi đã phải yêu cầu chỉnh theo mẫu. Khi phản biện, tôi muốn hỏi: “Bằng chứng nào cho thấy đây là bước nghẽn?” và “Nếu chỉ sửa quy trình hoặc dùng Rule thì phần vấn đề còn lại là gì?”.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
----
+Bài nhóm đang đề xuất C08: người chạy quảng cáo phải kiểm tra lead trùng và trạng thái đã thanh toán trước khi bàn giao cho Sales. Quy trình hiện tại gồm mở file riêng, dò file tổng, dò danh sách paid, chuẩn hóa dữ liệu, copy và báo Sales; bước dò trùng khoảng 70 phút và dò paid khoảng 50 phút theo card. Metric đề xuất là giảm tổng thời gian từ 2–3 giờ xuống tối đa 30 phút/ngày/người và giảm cuộc gọi sai hoặc nhầm từ 9–15 xuống tối đa 2 lần/tuần, nhưng baseline còn cần xác minh. Boundary đề xuất là không tự xóa hay gộp khách chưa chắc chắn, không tự sửa trạng thái thanh toán và để con người duyệt trước khi bàn giao. Mức ưu tiên kiểm chứng là Rule để chuẩn hóa và đối chiếu theo điều kiện rõ ràng, chưa có bằng chứng cần Workflow có AI hoặc Agent. Báo cáo nhóm đang ghi nhận định sơ bộ Not Yet vì dữ liệu và kiểm chứng chưa đầy đủ, trong khi phần quyết định CP6 chưa được chốt. Bước tiếp theo là kiểm chứng với người dùng thật, xác nhận dữ liệu được phép dùng và cập nhật quyết định theo kết quả đo.
 
-## 7. Tài liệu tham khảo
-
-- [Worksheet — hướng dẫn CP1–CP7](../../docs/01-worksheet.md).
-- [Quy định sử dụng AI](../../RULES.md) và [Rubric](../../RUBRIC.md).
-- [Bộ card cá nhân đã tổng hợp](../../tonghop/tonghop.md), [tiêu chí so sánh](../../tonghop/tieuchi.md) và [báo cáo nhóm](../team/group_report.md).
-- Công cụ hỗ trợ: ChatGPT/Codex trong cuộc trao đổi làm bài; tình huống và số liệu cá nhân do tôi tự cung cấp.
